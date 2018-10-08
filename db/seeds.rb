@@ -11,16 +11,24 @@ Game.destroy_all
 puts 'Creating games...'
 restaurants_attributes = [
   {
-    date:         'Dishoom',
-    address:      'Campo Pequeno',
-    price:  4,
-    numbers_of_players:        16
+    date:         "2018-10-12 18:50:00",
+    location:      'Campo Pequeno',
+    number_of_players:        16
   },
   {
-    date:         'Pizza East',
-    address:      'Olaias',
-    price:  5,
-    numbers_of_players:        16
+    date:         "2018-10-12 18:50:00",
+    location:      'Olaias',
+    number_of_players:        16
+  },
+  {
+    date:         "2018-10-14 18:50:00",
+    location:      'Praça de Espanha',
+    number_of_players:        16
+  },
+  {
+    date:         "2018-10-15 18:50:00",
+    location:      'Anjos',
+    number_of_players:        16
   }
 ]
 Game.create!(restaurants_attributes)

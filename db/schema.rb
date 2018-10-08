@@ -18,7 +18,7 @@ ActiveRecord::Schema.define(version: 2018_10_08_131452) do
   create_table "games", force: :cascade do |t|
     t.datetime "date"
     t.string "location"
-    t.integer "numberOfPlayers"
+    t.integer "number_of_players"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
