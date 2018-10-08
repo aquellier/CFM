@@ -1,0 +1,7 @@
+.players-list {
+  border-left: 1px solid $gray;
+  h2 {
+    text-align: center;
+  }
+  min-height: calc(100vh - 70px);
+}
