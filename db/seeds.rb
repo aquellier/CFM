@@ -8,8 +8,8 @@
 puts 'Cleaning database...'
 Game.destroy_all
 
-puts 'Creating games...'
-restaurants_attributes = [
+puts 'Creating games and users...'
+games_attributes = [
   {
     date:         "2018-10-12 18:45:00",
     location:      'Campo Pequeno',
@@ -35,5 +35,55 @@ restaurants_attributes = [
     photo: "https://www.lx-prestige.fr/wp-content/uploads/2015/07/fiche-quartier-anjos-intendente-lisbonne-portugal-5-845x675.jpg"
   }
 ]
-Game.create!(restaurants_attributes)
+
+users_attributes = [
+  {
+    first_name: "Christan",
+    last_name: "Ronalde",
+    email: "christian.ronalde@gmail.com",
+    password: "crazyfootball",
+    nationality: "portuguese",
+    date_of_birth: "20/09/1986",
+    position: "attacker"
+  },
+  {
+    first_name: "Leo",
+    last_name: "Messaround",
+    email: "leo.messaround@gmail.com",
+    password: "crazyfootball",
+    nationality: "argentinian",
+    date_of_birth: "20/10/1988",
+    position: "attacker"
+  },
+  {
+    first_name: "Thiagu",
+    last_name: "Sylvester",
+    email: "thiagu.sylvester@gmail.com",
+    password: "crazyfootball",
+    nationality: "brazilian",
+    date_of_birth: "10/06/1985",
+    position: "defender"
+  },
+  {
+    first_name: "N'golo",
+    last_name: "Kant",
+    email: "ngolo.kant@gmail.com",
+    password: "crazyfootball",
+    nationality: "french",
+    date_of_birth: "20/11/1991",
+    position: "midfielder"
+  },
+  {
+    first_name: "Manu",
+    last_name: "Neuart",
+    email: "manu.neuart@gmail.com",
+    password: "crazyfootball",
+    nationality: "german",
+    date_of_birth: "15/04/1986",
+    position: "goalkeeper"
+  }
+]
+
+Game.create!(games_attributes)
+User.create!(users_attributes)
 puts 'Finished!'
