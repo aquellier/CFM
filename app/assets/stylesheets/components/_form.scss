@@ -1,0 +1,26 @@
+.form-signup {
+    background: white;
+    padding: 25px;
+    margin-top: 20px;
+    border-radius: 4px;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+    h2 {
+      font-size: 26px;
+      margin-bottom: 30px;
+      text-align: center;
+      font-weight: bold;
+    }
+    .btn {
+      width: 100%;
+      margin-bottom: 15px;
+    }
+    a:hover {
+      text-decoration: none;
+    }
+}
+
+.date-input{
+  margin: 5px 0;
+  width: 32%;
+  justify-content: space-around;
+}

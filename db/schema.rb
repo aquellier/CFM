@@ -36,7 +36,7 @@ ActiveRecord::Schema.define(version: 2018_10_10_095946) do
     t.string "first_name"
     t.string "last_name"
     t.string "nationality"
-    t.string "date_of_birth"
+    t.date "date_of_birth"
     t.string "position"
     t.string "reset_password_token"
     t.datetime "reset_password_sent_at"
