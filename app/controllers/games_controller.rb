@@ -10,10 +10,15 @@ class GamesController < ApplicationController
 
   def new
     @game = Game.new
-    @game = Game.new(game_params)
   end
 
   def create
+    @game = Game.new(game_params)
+    if @game.save
+      redirect_to games_path
+    else
+      render :new
+    end
   end
 
   def edit
@@ -28,7 +33,7 @@ class GamesController < ApplicationController
   private
 
   def game_params
-    params.permit(:date, :time, :location, :number_of_players)
+    params.require(:game).permit(:date, :time, :location, :number_of_players)
   end
 
   def set_game
