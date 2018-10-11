@@ -1,2 +1,25 @@
-<h1>Games#new</h1>
-<p>Find me in app/views/games/new.html.erb</p>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
+      <div class="form-login">
+        <h2>Create a game</h2>
+        <%= simple_form_for(@game) do |f| %>
+          <div class="form-inputs">
+            <%= f.label :date, required: true %>
+            <br>
+            <%= f.input_field :date, required: true, class: 'date-input' %>
+            <%= f.label :time, required: true %>
+            <br>
+            <%= f.input_field :time, required: true, class: 'date-input' %>
+            <%= f.input :location, required: true %>
+            <%= f.input :number_of_players, required: true, hint: "* Remember to add one substitute per team" %>
+          </div>
+
+          <div class="form-actions">
+            <%= f.button :submit, "Create game", class: 'btn btn-primary' %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
