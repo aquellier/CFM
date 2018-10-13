@@ -15,7 +15,7 @@ class BookingsController < ApplicationController
     @booking.game = @game
     @booking.user = current_user
     if @booking.save
-      redirect_to games_path
+      redirect_to game_path(@game)
     else
       render "games/show"
     end
