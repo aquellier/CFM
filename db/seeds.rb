@@ -30,7 +30,7 @@ games_attributes = [
     date:         "2018-10-14",
     time:         "18:45:00",
     location:      "Praça de Espanha",
-    metro_station: "Praça de Espanha"
+    metro_station: "Praça de Espanha",
     number_of_players:        16,
     photo: "https://mediaserver2.rr.pt/newrr/praca_de_espanha_foto_dr6678053d.jpg"
   },
@@ -52,7 +52,8 @@ users_attributes = [
     password: "crazyfootball",
     nationality: "portuguese",
     date_of_birth: "20/09/1986",
-    position: "attacker"
+    position: "attacker",
+    photo: "7918959_cb54c8e...3bbca-1_1000x625"
   },
   {
     first_name: "Leo",
@@ -61,7 +62,8 @@ users_attributes = [
     password: "crazyfootball",
     nationality: "argentinian",
     date_of_birth: "20/10/1988",
-    position: "attacker"
+    position: "attacker",
+    photo: "lionel-messi-ba...33u18x5tg5m8enm8"
   },
   {
     first_name: "Thiagu",
@@ -70,7 +72,8 @@ users_attributes = [
     password: "crazyfootball",
     nationality: "brazilian",
     date_of_birth: "10/06/1985",
-    position: "defender"
+    position: "defender",
+    photo: "29241-1462893880"
   },
   {
     first_name: "N'golo",
@@ -79,7 +82,8 @@ users_attributes = [
     password: "crazyfootball",
     nationality: "french",
     date_of_birth: "20/11/1991",
-    position: "midfielder"
+    position: "midfielder",
+    photo: "https://pbs.twimg.com/profile_images/1019597917806526464/-ks541OM_400x400.jpg"
   },
   {
     first_name: "Manu",
@@ -88,7 +92,8 @@ users_attributes = [
     password: "crazyfootball",
     nationality: "german",
     date_of_birth: "15/04/1986",
-    position: "goalkeeper"
+    position: "goalkeeper",
+    photo: "250px-20180602_...l_Neuer_850_0723"
   }
 ]
 
