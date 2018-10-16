@@ -1,0 +1,27 @@
+<!-- Game information -->
+<div class="join-game">
+  <h4>This game will take place <strong><%= @game.date.strftime('%a %d %b %Y') %></strong> at <strong><%= @game.date.strftime('%I:%M pm') %></strong> at this location:</h4>
+<!--   map box -->
+  <div class="map-box">
+
+  </div>
+
+  <h4><%= @game.location %></h4>
+  <p>Number of players: <%= @game.number_of_players / 2 - 1 %> x <%= @game.number_of_players / 2 - 1 %></p>
+
+
+  <!--   Check if user is already registered for the game, join the game -->
+  <% players = @game.bookings.to_a.map { |booking| booking.user } %>
+  <% if players.include?(current_user) %>
+    <p>You're already registered for this game</p>
+  <% elsif players.length >= @game.number_of_players %>
+    <p>This game is already full</p>
+  <% else %>
+    <%= simple_form_for [@game, @booking] do |f| %>
+    <div class="form-actions" style="text-align: center; ">
+      <%= f.button :submit, 'Join this game', class: "btn btn-primary" %>
+      <% end %>
+    </div>
+  <% end %>
+
+</div>

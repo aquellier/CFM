@@ -2,7 +2,6 @@
   <%= link_to game_path(game) do %>
     <div class="col-xs-12 col-sm-6 col-md-4">
       <div class="card">
-
 <!--         Check if the game is full and return the card-picture accordingly -->
       <% if game.bookings.length == 2 %>
       <div class="card-picture filter-full" style="background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url(<%= game.photo %>);">
@@ -14,10 +13,13 @@
           <h2><%= game.metro_station %></h2>
       </div>
       <% end %>
+
+<!--       Card-footer -->
         <div class="card-footer">
           <h4><%= game.date.strftime('%a %d %b %Y') %>, <%= game.time.strftime('%l:%Mpm') %></h4>
             <p>Number of players: <strong><%= game.number_of_players / 2 - 1 %> x <%= game.number_of_players / 2 - 1 %></strong></p>
         </div>
+
       </div>
     </div>
   <% end %>
