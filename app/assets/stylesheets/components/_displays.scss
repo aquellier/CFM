@@ -32,3 +32,14 @@
   border: 1px solid $gray;
   margin: 15px auto;
 }
+
+.profile-tabs {
+  display: flex;
+  padding: 10px 10px 0 10px;
+}
+
+.tab.active {
+  border-radius: 10px 0 0 0;
+  background-color: white;
+  color: black;
+}
