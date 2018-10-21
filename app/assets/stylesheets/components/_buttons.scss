@@ -1,6 +1,20 @@
 .gray-button {
-  background-color: $light-gray;
-  padding: 10px 20px;
-  border-radius: 50%;
-  color: $dark-gray;
+  background-color: black;
+  padding: 10px 50px;
+  border: 1px solid $light-gray;
+  color: $light-gray;
+  bottom: 25px;
+  transition: 0.6s;
+  background-opacity: 0.6;
+  font-weight: lighter;
+  &:hover {
+    transition: 0.6s;
+    text-decoration: none;
+    color: $dark-gray;
+    background-color: $light-gray;
+  }
 }
+
+  a:hover {
+    text-decoration: none;
+  }
