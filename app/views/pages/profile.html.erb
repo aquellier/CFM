@@ -1,21 +1,25 @@
 <div class="banner-profile">
   <div class="profile-content">
-
-      <% if current_user.photo.model[:photo] == nil %>
-            <%= image_tag "https://collaborativecbt.com/wp-content/uploads/2016/12/default-avatar.png", class: "avatar-profile"%>
-      <% else %>
-            <%= cl_image_tag current_user.photo, crop: :thumb, gravity: :face, class: "avatar-profile"%>
-      <% end %>
-
+    <!-- profile picture and name -->
+    <% if current_user.photo.model[:photo] == nil %>
+          <%= image_tag "https://collaborativecbt.com/wp-content/uploads/2016/12/default-avatar.png", class: "avatar-profile"%>
+    <% else %>
+          <%= cl_image_tag current_user.photo, crop: :thumb, gravity: :face, class: "avatar-profile"%>
+    <% end %>
     <h3><%= current_user.first_name %> <%= current_user.last_name %></h3>
-    <h4>
-      <%= current_user.position %>
-    </h4>
 
-    <p>
-    Number of games: <%= current_user.bookings.reject { |booking| booking.game.date > Date.today }.length  %>
-    </p>
-    <%= link_to "Update my information", games_path, class: 'gray-button' %>
+    <!-- infos on player -->
+    <div class="profile-infos">
+      <p>
+        Position: <%= current_user.position %>
+      </p>
+
+      <p>
+      <%= current_user.bookings.reject { |booking| booking.game.date > Date.today }.length  %>
+      </p>
+
+    </div>
+      <%= link_to "Update my information", games_path, class: 'gray-button' %>
   </div>
   <div class="banner-profile-picture" style="background-image: linear-gradient(to bottom, rgba(0,0,0,0) 20%, rgba(0,0,0,1)), url('https://static1.squarespace.com/static/57190c9960b5e9da710a2bf3/t/571d77558259b5e9df69a180/1461548887190/empty-soccer-field-night-photos-6.jpg?format=1500w');">
   </div>
