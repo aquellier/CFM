@@ -53,7 +53,10 @@ users_attributes = [
     nationality: "portuguese",
     date_of_birth: "20/09/1986",
     position: "attacker",
-    photo: "7918959_cb54c8e...3bbca-1_1000x625"
+    photo: "7918959_cb54c8e...3bbca-1_1000x625",
+    size: 178,
+    weight: 76,
+    phone_number: "+336000000000"
   },
   {
     first_name: "Leo",
@@ -63,7 +66,10 @@ users_attributes = [
     nationality: "argentinian",
     date_of_birth: "20/10/1988",
     position: "attacker",
-    photo: "lionel-messi-ba...33u18x5tg5m8enm8"
+    photo: "lionel-messi-ba...33u18x5tg5m8enm8",
+    size: 178,
+    weight: 76,
+    phone_number: "+336000000000"
   },
   {
     first_name: "Thiagu",
@@ -73,7 +79,10 @@ users_attributes = [
     nationality: "brazilian",
     date_of_birth: "10/06/1985",
     position: "defender",
-    photo: "29241-1462893880"
+    photo: "29241-1462893880",
+    size: 178,
+    weight: 76,
+    phone_number: "+336000000000"
   },
   {
     first_name: "N'golo",
@@ -83,7 +92,10 @@ users_attributes = [
     nationality: "french",
     date_of_birth: "20/11/1991",
     position: "midfielder",
-    photo: "https://pbs.twimg.com/profile_images/1019597917806526464/-ks541OM_400x400.jpg"
+    photo: "https://pbs.twimg.com/profile_images/1019597917806526464/-ks541OM_400x400.jpg",
+    size: 178,
+    weight: 76,
+    phone_number: "+336000000000"
   },
   {
     first_name: "Manu",
@@ -93,7 +105,10 @@ users_attributes = [
     nationality: "german",
     date_of_birth: "15/04/1986",
     position: "goalkeeper",
-    photo: "250px-20180602_...l_Neuer_850_0723"
+    photo: "250px-20180602_...l_Neuer_850_0723",
+    size: 178,
+    weight: 76,
+    phone_number: "+336000000000"
   }
 ]
 
