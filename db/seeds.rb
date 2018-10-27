@@ -15,34 +15,42 @@ games_attributes = [
     time:         "18:45:00",
     location:      "Campo Pequeno",
     metro_station:  "Campo Pequeno",
-    number_of_players:        16,
-    photo: "http://www.campopequeno.com/docs/images/crop/20160118145018498041.jpg"
+    number_of_players:        16
   },
   {
     date:         "2018-10-12",
     time:         "18:45:00",
     location:      "R. Olivença 1585, 1900-379 Lisboa",
     metro_station: "Olaias",
-    number_of_players:        16,
-    photo: "https://lh-i.global.ssl.fastly.net/images/holidays/db340a75354d2365859548be347f0f0fefa03019/portugal/lisbon/olaias-park-hotel-0.jpg?width=720&auto=webp&fit=crop&height=387"
+    number_of_players:        16
   },
   {
     date:         "2018-10-14",
     time:         "18:45:00",
     location:      "Praça de Espanha",
     metro_station: "Praça de Espanha",
-    number_of_players:        16,
-    photo: "https://mediaserver2.rr.pt/newrr/praca_de_espanha_foto_dr6678053d.jpg"
+    number_of_players:        16
   },
   {
     date:         "2018-10-15",
     time:         "18:45:00",
     location:      "Anjos",
     metro_station: "Anjos",
-    number_of_players:        16,
-    photo: "https://www.lx-prestige.fr/wp-content/uploads/2015/07/fiche-quartier-anjos-intendente-lisbonne-portugal-5-845x675.jpg"
+    number_of_players:        16
   }
 ]
+
+games_attributes.each do |game_attributes|
+  if game_attributes[:metro_station] == "Campo Pequeno"
+    game_attributes[:photo] = "http://www.campopequeno.com/docs/images/crop/20160118145018498041.jpg"
+  elsif game_attributes[:metro_station] == "Olaias"
+    game_attributes[:photo] = "https://lh-i.global.ssl.fastly.net/images/holidays/db340a75354d2365859548be347f0f0fefa03019/portugal/lisbon/olaias-park-hotel-0.jpg?width=720&auto=webp&fit=crop&height=387"
+  elsif game_attributes[:metro_station] == "Praça de Espanha"
+    game_attributes[:photo] = "https://mediaserver2.rr.pt/newrr/praca_de_espanha_foto_dr6678053d.jpg"
+  elsif game_attributes[:metro_station] == "Anjos"
+    game_attributes[:photo] = "https://www.lx-prestige.fr/wp-content/uploads/2015/07/fiche-quartier-anjos-intendente-lisbonne-portugal-5-845x675.jpg"
+  end
+end
 
 users_attributes = [
   {

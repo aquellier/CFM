@@ -15,7 +15,7 @@
       </p>
 
       <p>
-      <%= current_user.bookings.reject { |booking| booking.game.date > Date.today }.length  %>
+        <%= current_user.bookings.reject { |booking| booking.game.date > Date.today }.length  %>
       </p>
 
     </div>
