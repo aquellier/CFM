@@ -9,6 +9,12 @@
   justify-content: center;
   text-align: center;
   position: relative;
+  h2 {
+    font-size: 24px;
+  }
+  p {
+    font-size: 16px;
+  }
 }
 
 .banner-profile-picture {
@@ -21,6 +27,31 @@
   position: absolute;
   z-index: 0;
   /* if you have a 70px navbar => height: calc(100vh - 70px); */
+}
+.game-infos {
+  display: inline-flex;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.game-info {
+  padding: 8px 15px;
+  display: inline-flex;
+  h3 {
+    font-size: 36px;
+    margin: 0;
+    margin-top: 12.5px;
+    margin-bottom: 12.5px;
+  }
+  h4 {
+    padding-left: 6px;
+    font-size: 16px;
+  }
+}
+
+.middle-info {
+  border-left: 1px solid $light-gray;
+  border-right: 1px solid $light-gray;
 }
 
 .profile-content {
@@ -35,3 +66,15 @@
   text-align: left;
   margin-left: 0;
 }
+
+.info-category {
+  text-align: right;
+  padding-right: 35px;
+  font-weight: lighter;
+}
+
+.info-value {
+  text-align: left;
+  font-weight: bold;
+}
+

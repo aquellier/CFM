@@ -8,18 +8,80 @@
     <% end %>
     <h3><%= current_user.first_name %> <%= current_user.last_name %></h3>
 
-    <!-- infos on player -->
-    <div class="profile-infos">
-      <p>
-        Position: <%= current_user.position %>
-      </p>
-
-      <p>
-        <%= current_user.bookings.reject { |booking| booking.game.date > Date.today }.length  %>
-      </p>
-
+    <!-- Player's stats -->
+    <div class="game-infos">
+      <div class="game-info">
+          <h3>
+            <%= current_user.bookings.reject { |booking| booking.game.date > Date.today }.length  %>
+          </h3>
+          <h4>Games<br>Played</h4>
+      </div>
+      <div class="game-info middle-info">
+          <h3>
+            <%= current_user.bookings.reject { |booking| booking.game.date > Date.today }.length  %>
+          </h3>
+          <h4>Games<br>Missed</h4>
+      </div>
+      <div class="game-info">
+          <h3>
+            <%= current_user.bookings.reject { |booking| booking.game.date > Date.today }.length  %>
+          </h3>
+          <h4>Goals<br>Scored</h4>
+      </div>
     </div>
-      <%= link_to "Update my information", games_path, class: 'gray-button' %>
+
+    <!-- Player's info -->
+    <div class="profile-infos">
+      <table>
+        <tbody>
+          <tr>
+            <td class="info-category">
+              Position:
+            </td>
+            <td class="info-value">
+              <%= current_user.position.capitalize %>
+            </td>
+          </tr>
+          <tr>
+            <td class="info-category">
+              Nationality:
+            </td>
+            <td class="info-value">
+              <%= current_user.nationality.capitalize %>
+            </td>
+          </tr>
+          <tr>
+            <td class="info-category">
+              Weight:
+            </td>
+            <td class="info-value">
+              <%= current_user.weight %> kg
+            </td>
+          </tr>
+          <tr>
+            <td class="info-category">
+              Size:
+            </td>
+            <td class="info-value">
+              <%= current_user.size.to_s[0] %>.<%= current_user.size.to_s[1..-1] %>m
+            </td>
+            <tr>
+            <td class="info-category">
+              Phone number:
+            </td>
+            <td class="info-value">
+              <%= current_user.phone_number[0..3] %>
+              <%= current_user.phone_number[4..6] %>
+              <%= current_user.phone_number[7..9] %>
+              <%= current_user.phone_number[9..11] %>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+
+  <%= link_to "Update my information", games_path, class: 'gray-button' %>
   </div>
   <div class="banner-profile-picture" style="background-image: linear-gradient(to bottom, rgba(0,0,0,0) 20%, rgba(0,0,0,1)), url('https://static1.squarespace.com/static/57190c9960b5e9da710a2bf3/t/571d77558259b5e9df69a180/1461548887190/empty-soccer-field-night-photos-6.jpg?format=1500w');">
   </div>
