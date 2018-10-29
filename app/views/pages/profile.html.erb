@@ -73,10 +73,12 @@
               Phone number:
             </td>
             <td class="info-value">
-              <%= current_user.phone_number[0..3] %>
-              <%= current_user.phone_number[4..6] %>
-              <%= current_user.phone_number[7..9] %>
-              <%= current_user.phone_number[9..11] %>
+              <% if current_user.phone_number %>
+                <%= current_user.phone_number[0..3] %>
+                <%= current_user.phone_number[4..6] %>
+                <%= current_user.phone_number[7..9] %>
+                <%= current_user.phone_number[9..11] %>
+              <% end %>
             </td>
           </tr>
         </tbody>
