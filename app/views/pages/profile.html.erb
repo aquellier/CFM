@@ -34,12 +34,13 @@
     <div class="profile-infos">
       <table>
         <tbody>
+
           <tr>
             <td class="info-category">
               Position:
             </td>
             <td class="info-value">
-              <%= current_user.position.capitalize %>
+              <%= current_user.position.capitalize if current_user.position %>
             </td>
           </tr>
           <tr>
@@ -47,7 +48,7 @@
               Nationality:
             </td>
             <td class="info-value">
-              <%= current_user.nationality.capitalize %>
+              <%= current_user.nationality.capitalize  if current_user.nationality %>
             </td>
           </tr>
           <tr>
@@ -55,7 +56,7 @@
               Weight:
             </td>
             <td class="info-value">
-              <%= current_user.weight %> kg
+              <%= current_user.weight if current_user.weight %> kg
             </td>
           </tr>
           <tr>
@@ -63,7 +64,9 @@
               Size:
             </td>
             <td class="info-value">
-              <%= current_user.size.to_s[0] %>.<%= current_user.size.to_s[1..-1] %>m
+              <% if current_user.size %>
+                <%= current_user.size.to_s[0] %>.<%= current_user.size.to_s[1..-1] %>m
+              <% end %>
             </td>
             <tr>
             <td class="info-category">
