@@ -2,7 +2,7 @@ class GamesController < ApplicationController
   skip_before_action :authenticate_user!, only: [ :index, :show ]
   before_action :set_game, only: [:show, :edit, :update, :destroy]
   def index
-    @games = Game.all
+    @games = Game.where(:date => Date.today..Date.today + 14)
   end
 
   def show
