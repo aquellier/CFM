@@ -7,11 +7,11 @@ class GamesController < ApplicationController
 
   def show
     @booking = Booking.new
-    @markers = {
+    @markers = [{
         lat: @game.latitude,
         lng: @game.longitude#,
         # infoWindow: { content: render_to_string(partial: "/games/map_box", locals: { flat: flat }) }
-    }
+    }]
   end
 
   def new
