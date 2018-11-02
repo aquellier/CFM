@@ -29,7 +29,7 @@ games_attributes = []
       date:           day.strftime("%a %d %b %Y"),
       time:           "20:00:00",
       location:       "R. Olivença 1585, 1900-379 Lisboa",
-      metro_station:  "Olais",
+      metro_station:  "Olaias",
       photo:          "https://lh-i.global.ssl.fastly.net/images/holidays/db340a75354d2365859548be347f0f0fefa03019/portugal/lisbon/olaias-park-hotel-0.jpg?width=720&auto=webp&fit=crop&height=387",
       number_of_players:        16
     })
@@ -38,7 +38,7 @@ games_attributes = []
       date:           day.strftime("%a %d %b %Y"),
       time:           "21:00:00",
       location:       "R. Olivença 1585, 1900-379 Lisboa",
-      metro_station:  "Olais",
+      metro_station:  "Olaias",
       photo:          "https://lh-i.global.ssl.fastly.net/images/holidays/db340a75354d2365859548be347f0f0fefa03019/portugal/lisbon/olaias-park-hotel-0.jpg?width=720&auto=webp&fit=crop&height=387",
       number_of_players:        16
     })
@@ -47,7 +47,7 @@ games_attributes = []
       date:           day.strftime("%a %d %b %Y"),
       time:           "20:00:00",
       location:       "R. Olivença 1585, 1900-379 Lisboa",
-      metro_station:  "Olais",
+      metro_station:  "Olaias",
       photo:          "https://lh-i.global.ssl.fastly.net/images/holidays/db340a75354d2365859548be347f0f0fefa03019/portugal/lisbon/olaias-park-hotel-0.jpg?width=720&auto=webp&fit=crop&height=387",
       number_of_players:        16
     })
@@ -81,7 +81,7 @@ games_attributes = []
       date:           day.strftime("%a %d %b %Y"),
       time:           "21:00:00",
       location:       "R. Olivença 1585, 1900-379 Lisboa",
-      metro_station:  "Olais",
+      metro_station:  "Olaias",
       photo:          "https://lh-i.global.ssl.fastly.net/images/holidays/db340a75354d2365859548be347f0f0fefa03019/portugal/lisbon/olaias-park-hotel-0.jpg?width=720&auto=webp&fit=crop&height=387",
       number_of_players:        16
     })
@@ -107,7 +107,7 @@ games_attributes = []
       date:           day.strftime("%a %d %b %Y"),
       time:           "19:00:00",
       location:       "R. Olivença 1585, 1900-379 Lisboa",
-      metro_station:  "Olais",
+      metro_station:  "Olaias",
       photo:          "https://lh-i.global.ssl.fastly.net/images/holidays/db340a75354d2365859548be347f0f0fefa03019/portugal/lisbon/olaias-park-hotel-0.jpg?width=720&auto=webp&fit=crop&height=387",
       number_of_players:        16
     })
