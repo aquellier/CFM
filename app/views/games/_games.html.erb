@@ -18,6 +18,7 @@
         <div class="card-footer">
           <h4><%= game.date.strftime('%a %d %b %Y') %>, <%= game.time.strftime('%l:%Mpm') %></h4>
             <p>Number of players: <strong><%= game.number_of_players / 2 - 1 %> x <%= game.number_of_players / 2 - 1 %></strong></p>
+            <p>Amount: <%= humanized_money_with_symbol(game.price) %></p>
         </div>
 
       </div>

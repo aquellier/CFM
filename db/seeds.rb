@@ -31,7 +31,8 @@ games_attributes = []
       location:       "R. Olivença 1585, 1900-379 Lisboa",
       metro_station:  "Olaias",
       photo:          "https://lh-i.global.ssl.fastly.net/images/holidays/db340a75354d2365859548be347f0f0fefa03019/portugal/lisbon/olaias-park-hotel-0.jpg?width=720&auto=webp&fit=crop&height=387",
-      number_of_players:        16
+      number_of_players:        16,
+      price_cents:          400
     })
   when "Tue"
     Game.create!({
@@ -40,7 +41,8 @@ games_attributes = []
       location:       "R. Olivença 1585, 1900-379 Lisboa",
       metro_station:  "Olaias",
       photo:          "https://lh-i.global.ssl.fastly.net/images/holidays/db340a75354d2365859548be347f0f0fefa03019/portugal/lisbon/olaias-park-hotel-0.jpg?width=720&auto=webp&fit=crop&height=387",
-      number_of_players:        16
+      number_of_players:        16,
+      price_cents:          400
     })
   when "Wed"
     Game.create!({
@@ -49,7 +51,8 @@ games_attributes = []
       location:       "R. Olivença 1585, 1900-379 Lisboa",
       metro_station:  "Olaias",
       photo:          "https://lh-i.global.ssl.fastly.net/images/holidays/db340a75354d2365859548be347f0f0fefa03019/portugal/lisbon/olaias-park-hotel-0.jpg?width=720&auto=webp&fit=crop&height=387",
-      number_of_players:        16
+      number_of_players:        16,
+      price_cents:          400
     })
     Game.create!({
       date:           day.strftime("%a %d %b %Y"),
@@ -57,7 +60,8 @@ games_attributes = []
       location:       "R. Olivença 1585, 1900-379 Lisboa",
       metro_station:  "Praça de Espanha",
       photo:          "https://mediaserver2.rr.pt/newrr/praca_de_espanha_foto_dr6678053d.jpg",
-      number_of_players:        16
+      number_of_players:        16,
+      price_cents:          400
     })
   when "Thu"
     Game.create!({
@@ -66,7 +70,8 @@ games_attributes = []
       location:       "R. Olivença 1585, 1900-379 Lisboa",
       metro_station:  "Praça de Espanha",
       photo:          "https://mediaserver2.rr.pt/newrr/praca_de_espanha_foto_dr6678053d.jpg",
-      number_of_players:        16
+      number_of_players:        16,
+      price_cents:          400
     })
     Game.create!({
       date:           day.strftime("%a %d %b %Y"),
@@ -74,7 +79,8 @@ games_attributes = []
       location:       "R. Olivença 1585, 1900-379 Lisboa",
       metro_station:  "Praça de Espanha",
       photo:          "https://mediaserver2.rr.pt/newrr/praca_de_espanha_foto_dr6678053d.jpg",
-      number_of_players:        16
+      number_of_players:        16,
+      price_cents:          400
     })
   when "Fri"
     Game.create!({
@@ -83,7 +89,8 @@ games_attributes = []
       location:       "R. Olivença 1585, 1900-379 Lisboa",
       metro_station:  "Olaias",
       photo:          "https://lh-i.global.ssl.fastly.net/images/holidays/db340a75354d2365859548be347f0f0fefa03019/portugal/lisbon/olaias-park-hotel-0.jpg?width=720&auto=webp&fit=crop&height=387",
-      number_of_players:        16
+      number_of_players:        16,
+      price_cents:          400
     })
   when "Sat"
     Game.create!({
@@ -92,7 +99,8 @@ games_attributes = []
       location:       "R. Olivença 1585, 1900-379 Lisboa",
       metro_station:  "Praça de Espanha",
       photo:          "https://mediaserver2.rr.pt/newrr/praca_de_espanha_foto_dr6678053d.jpg",
-      number_of_players:        16
+      number_of_players:        16,
+      price_cents:          400
     })
     Game.create!({
       date:           day.strftime("%a %d %b %Y"),
@@ -100,7 +108,8 @@ games_attributes = []
       location:       "R. Olivença 1585, 1900-379 Lisboa",
       metro_station:  "Praça de Espanha",
       photo:          "https://mediaserver2.rr.pt/newrr/praca_de_espanha_foto_dr6678053d.jpg",
-      number_of_players:        16
+      number_of_players:        16,
+      price_cents:          400
     })
   when "Sun"
     Game.create!({
@@ -109,7 +118,8 @@ games_attributes = []
       location:       "R. Olivença 1585, 1900-379 Lisboa",
       metro_station:  "Olaias",
       photo:          "https://lh-i.global.ssl.fastly.net/images/holidays/db340a75354d2365859548be347f0f0fefa03019/portugal/lisbon/olaias-park-hotel-0.jpg?width=720&auto=webp&fit=crop&height=387",
-      number_of_players:        16
+      number_of_players:        16,
+      price_cents:          400
     })
   end
 end

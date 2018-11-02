@@ -20,6 +20,7 @@
   <% elsif players.length >= @game.number_of_players %>
     <p>This game is already full</p>
   <% else %>
+  <p>Amount: <%= humanized_money_with_symbol(@teddy.price) %></p>
     <%= simple_form_for [@game, @booking] do |f| %>
     <div class="form-actions" style="text-align: center; ">
       <%= f.button :submit, 'Join this game', class: "btn btn-primary" %>
