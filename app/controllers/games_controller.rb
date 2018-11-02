@@ -20,6 +20,7 @@ class GamesController < ApplicationController
 
   def create
     @game = Game.new(game_params)
+    # if @game.metro_station == "Campo Pequeno"
     if @game.save
       redirect_to games_path
     else
@@ -34,6 +35,12 @@ class GamesController < ApplicationController
   end
 
   def destroy
+  end
+
+  def my_games
+    @bookings = current_user.bookings.each do |booking|
+      booking.game
+    end
   end
 
   private

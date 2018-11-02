@@ -1,0 +1,20 @@
+<table class="table-dashboard">
+  <caption>My Games</caption>
+  <thead>
+    <th>Location</th>
+    <th>Date</th>
+    <th>Time</th>
+    <th>Number of players per team</th>
+    <th></th>
+  </thead>
+  <tbody>
+    <% @bookings.each do |booking| %>
+      <tr>
+        <td><%= booking.game.metro_station %></td>
+        <td><%= booking.game.date.strftime("%a %d %b %Y") %></td>
+        <td><%= booking.game.time.strftime('%I:%M pm') %></td>
+        <td><%= booking.game.number_of_players / 2 - 1 %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

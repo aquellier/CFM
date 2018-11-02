@@ -1,13 +1,16 @@
 .form-signup {
-    background: white;
+    background: transparent;
+    color: $light-gray;
     padding: 25px;
     margin-top: 20px;
     border-radius: 4px;
     box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+    height: 600px;
+    overflow: scroll;
     h2 {
       font-size: 26px;
       margin-bottom: 30px;
-      text-align: center;
+      text-align: left;
       font-weight: bold;
     }
     .btn {
@@ -28,7 +31,7 @@
     h2 {
       font-size: 26px;
       margin-bottom: 30px;
-      text-align: center;
+      text-align: left;
       font-weight: bold;
     }
     .btn {
@@ -49,5 +52,13 @@
 .inline-elements {
   display: flex;
   justify-content: space-between;
+}
+
+.right-section{
+  background-color: $light-gray;
+  padding: 0 80px;
+  width: 45%;
+  height: 100vh;
+  float: right;
 }
 

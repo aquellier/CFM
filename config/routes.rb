@@ -7,4 +7,5 @@ Rails.application.routes.draw do
   resources :games do
     resources :bookings, only: [ :new, :create ]
   end
+  get '/my_games', to: 'games#my_games'
 end
