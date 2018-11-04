@@ -1,0 +1,6 @@
+<h1>Booking</h1>
+<ul>
+  <li>Status: <%= @booking.state %></li>
+  <li>Item: <%= @booking.game_id %></li>
+  <li>Amount: <%= humanized_money_with_symbol(@booking.amount) %></li>
+<ul>
