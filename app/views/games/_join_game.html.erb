@@ -21,7 +21,7 @@
     <p>This game is already full</p>
   <% else %>
   <p>Price: <%= humanized_money_with_symbol(@game.price) %></p>
-    <%= simple_form_for @booking do |f| %>
+    <%= simple_form_for [@game, @booking] do |f| %>
     <div class="form-actions" style="text-align: center; ">
       <%= f.button :submit, 'Join this game', class: "btn btn-primary" %>
       <% end %>
