@@ -8,6 +8,7 @@
             <%= f.label :date, required: true %>
             <br>
             <%= f.input_field :date, required: true, class: 'date-input' %>
+            <%= f.input :date, id: 'date', placeholder: 'please enter a date' %>
             <%= f.label :time, required: true %>
             <br>
             <%= f.input_field :time, required: true, class: 'date-input' %>
@@ -23,3 +24,8 @@
     </div>
   </div>
 </div>
+
+<script>
+  import flatpickr from "flatpickr";
+
+</script>
