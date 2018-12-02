@@ -3,7 +3,7 @@
   <h4>This game will take place <strong><%= @game.date.strftime('%a %d %b %Y') %></strong> at <strong><%= @game.time.strftime('%I:%M pm') %></strong> at <strong><%= @game.metro_station %></strong></h4>
 <!--   map box -->
 <div
-  id="map"
+  id="map-show"
   style="width: 100%;
   height: 300px;"
   data-markers="<%= @markers.to_json %>"

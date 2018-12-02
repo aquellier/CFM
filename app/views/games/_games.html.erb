@@ -1,6 +1,6 @@
 <% @games.each do |game| %>
   <%= link_to game_path(game) do %>
-    <div class="col-xs-12 col-sm-6 col-md-4">
+    <div class="col-xs-12 col-sm-6">
       <div class="card">
 <!--         Check if the game is full and return the card-picture accordingly -->
       <% if game.bookings.length == 2 %>

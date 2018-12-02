@@ -57,7 +57,7 @@ games_attributes = []
     Game.create!({
       date:           day.strftime("%a %d %b %Y"),
       time:           "21:00:00",
-      location:       "R. Olivença 1585, 1900-379 Lisboa",
+      location:       "Praça de Espanha, Lisboa",
       metro_station:  "Praça de Espanha",
       photo:          "https://mediaserver2.rr.pt/newrr/praca_de_espanha_foto_dr6678053d.jpg",
       number_of_players:        16,
@@ -67,7 +67,7 @@ games_attributes = []
     Game.create!({
       date:           day.strftime("%a %d %b %Y"),
       time:           "19:00:00",
-      location:       "R. Olivença 1585, 1900-379 Lisboa",
+      location:       "Praça de Espanha, Lisboa",
       metro_station:  "Praça de Espanha",
       photo:          "https://mediaserver2.rr.pt/newrr/praca_de_espanha_foto_dr6678053d.jpg",
       number_of_players:        16,
@@ -76,7 +76,7 @@ games_attributes = []
     Game.create!({
       date:           day.strftime("%a %d %b %Y"),
       time:           "20:00:00",
-      location:       "R. Olivença 1585, 1900-379 Lisboa",
+      location:       "Praça de Espanha, Lisboa",
       metro_station:  "Praça de Espanha",
       photo:          "https://mediaserver2.rr.pt/newrr/praca_de_espanha_foto_dr6678053d.jpg",
       number_of_players:        16,
@@ -96,7 +96,7 @@ games_attributes = []
     Game.create!({
       date:           day.strftime("%a %d %b %Y"),
       time:           "11:00:00",
-      location:       "R. Olivença 1585, 1900-379 Lisboa",
+      location:       "Praça de Espanha, Lisboa",
       metro_station:  "Praça de Espanha",
       photo:          "https://mediaserver2.rr.pt/newrr/praca_de_espanha_foto_dr6678053d.jpg",
       number_of_players:        16,
@@ -105,7 +105,7 @@ games_attributes = []
     Game.create!({
       date:           day.strftime("%a %d %b %Y"),
       time:           "19:00:00",
-      location:       "R. Olivença 1585, 1900-379 Lisboa",
+      location:       "Praça de Espanha, Lisboa",
       metro_station:  "Praça de Espanha",
       photo:          "https://mediaserver2.rr.pt/newrr/praca_de_espanha_foto_dr6678053d.jpg",
       number_of_players:        16,

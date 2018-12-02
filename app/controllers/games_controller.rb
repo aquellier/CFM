@@ -3,6 +3,12 @@ class GamesController < ApplicationController
   before_action :set_game, only: [:show, :edit, :update, :destroy]
   def index
     @games = Game.where(:date => Date.today..Date.today + 14)
+    @markers = @games.map do |game|
+      {
+        lng: game.longitude,
+        lat: game.latitude
+      }
+    end
   end
 
   def show

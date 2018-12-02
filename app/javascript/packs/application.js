@@ -1,7 +1,18 @@
+// Imports
 import "bootstrap";
 import { navbarScroll } from '../components/navbar';
-navbarScroll();
-import  { initMap } from '../components/map.js';
-initMap();
+import  { initMapShow, initMapIndex } from '../components/map.js';
 import { calendar } from '../components/flatpickr';
+
+// Pages
+const indexPage = document.querySelector('.games.index');
+const showPage = document.querySelector('.games.show');
+
+navbarScroll();
+if (indexPage) {
+  initMapIndex();
+}
+if (showPage) {
+  initMapShow();
+}
 calendar();
