@@ -1,4 +1,4 @@
-<div class="navbar-cfm <%= current_page?(controller: 'pages', action: 'home') ?  "navbar-cfm-transparent navbar-fixed-top" : "navbar-cfm-filled" %>">
+<div class="navbar-cfm <%= current_page?(controller: 'pages', action: 'home') ?  "navbar-cfm-transparent navbar-fixed-top" : "navbar-cfm-filled navbar-fixed-top" %>">
   <!-- Logo -->
   <%= link_to root_path, class: "navbar-cfm-brand" do %>
     <%= image_tag "logowhite.png" %>
