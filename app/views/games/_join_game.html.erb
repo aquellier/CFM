@@ -15,26 +15,16 @@
 
   <!--   Check if user is already registered for the game, join the game -->
   <% players = @game.bookings.to_a.map { |booking| booking.user } %>
-  <% if players.include?(current_user) %>
+  <% if players.include?(current_user)%>
     <p>You're already registered for this game</p>
   <% elsif players.length >= @game.number_of_players %>
     <p>This game is already full</p>
   <% else %>
-  <p>Price: <%= humanized_money_with_symbol(@game.price) %></p>
-    <%= simple_form_for [@game, @booking] do |f| %>
-    <div class="form-actions" style="text-align: center; ">
-      <%= f.button :submit, 'Join this game', class: "btn btn-primary" %>
-      <% end %>
-    </div>
-      <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-    Stripe.setPublishableKey('STRIPE_PUBLISHABLE_KEY');
-    data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
-    data-name="My game"
-    data-email="<%= current_user.email %>"
-    data-description="game <%= @booking.game_id %>"
-    data-amount="<%= @booking.amount_cents %>"
-    data-currency="<%= @booking.amount.currency %>"></script>
-    </div>
+    <%#= form_tag booking_payments_path(@booking) do %>
+    <p>Price: <%= humanized_money_with_symbol(@game.price) %></p>
+    <%= form_tag bookings_path do %>
+      <%= hidden_field_tag 'game_id', @game.id %>
+      <%= submit_tag 'Purchase', class: 'btn btn-primary' %>
+    <% end %>
   <% end %>
-
 </div>
