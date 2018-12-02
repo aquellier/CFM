@@ -1,7 +1,7 @@
-<div class="navbar-cfm">
+<div class="navbar-cfm <%= current_page?(controller: 'pages', action: 'home') ?  "navbar-cfm-transparent navbar-fixed-top" : "navbar-cfm-filled" %>">
   <!-- Logo -->
   <%= link_to root_path, class: "navbar-cfm-brand" do %>
-    <%= image_tag "logo.png", height: 50 %>
+    <%= image_tag "logo.png" %>
   <% end %>
 
   <!-- Right Navigation -->

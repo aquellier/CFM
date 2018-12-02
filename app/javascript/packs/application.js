@@ -1,9 +1,7 @@
 import "bootstrap";
-import { initUpdateNavbarOnScroll } from '../components/navbar';
-initUpdateNavbarOnScroll();
-import { calendar } from '../components/flatpickr';
-calendar();
-// import { loadDynamicBannerText } from '../components/banner';
-// loadDynamicBannerText();
+import { navbarScroll } from '../components/navbar';
+navbarScroll();
 import  { initMap } from '../components/map.js';
 initMap();
+import { calendar } from '../components/flatpickr';
+calendar();
