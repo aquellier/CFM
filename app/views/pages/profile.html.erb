@@ -12,19 +12,19 @@
     <div class="game-infos">
       <div class="game-info">
           <h3>
-            <%= current_user.bookings.reject { |booking| booking.game.date > Date.today }.length  %>
+            <%= current_user.bookings.length  %>
           </h3>
           <h4>Games<br>Played</h4>
       </div>
       <div class="game-info middle-info">
           <h3>
-            <%= current_user.bookings.reject { |booking| booking.game.date > Date.today }.length  %>
+            <%= current_user.bookings.length  %>
           </h3>
           <h4>Games<br>Missed</h4>
       </div>
       <div class="game-info">
           <h3>
-            <%= current_user.bookings.reject { |booking| booking.game.date > Date.today }.length  %>
+            <%= current_user.bookings.length  %>
           </h3>
           <h4>Goals<br>Scored</h4>
       </div>
