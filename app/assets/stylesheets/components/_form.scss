@@ -1,6 +1,6 @@
 .form-signup {
-    background: transparent;
-    color: $light-gray;
+    background: $pearl-white;
+    color: $brownie;
     padding: 25px;
     margin-top: 20px;
     border-radius: 4px;
@@ -17,13 +17,17 @@
       width: 100%;
       margin-bottom: 15px;
     }
+    a {
+      color: $brownie;
+    }
     a:hover {
       text-decoration: none;
     }
 }
 
 .form-login {
-    background: white;
+    background: $pearl-white;
+    color: $brownie;
     padding: 25px;
     margin-top: 20px;
     border-radius: 4px;
@@ -37,6 +41,9 @@
     .btn {
       width: 100%;
       margin-bottom: 15px;
+    }
+    a {
+      color: $brownie;
     }
     a:hover {
       text-decoration: none;

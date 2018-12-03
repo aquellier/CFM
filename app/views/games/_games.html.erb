@@ -1,29 +1,25 @@
 <div class="row">
   <% @games.each do |game| %>
     <%= link_to game_path(game) do %>
-      <div class="col-xs-12 col-sm-6">
+      <div class="col-xs-12">
         <div class="card">
   <!--         Check if the game is full and return the card-picture accordingly -->
+          <h4><%= game.date.strftime('%a %d %b %Y') %>, <%= game.time.strftime('%l:%Mpm') %></h4>
+            <p>Number of players: <strong><%= game.number_of_players / 2 - 1 %> x <%= game.number_of_players / 2 - 1 %></strong></p>
+            <p>Price: <%= humanized_money_with_symbol(game.price) %></p>
         <% if game.bookings.length == 2 %>
-        <div class="card-picture filter-full" style="background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url(<%= game.photo %>);">
+        <div class="filter-full">
             <h2><%= game.metro_station %></h2>
         </div>
         <span class="full-sticker"><p>Full</p></span>
         <% else %>
-        <div class="card-picture" style="background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url(<%= game.photo %>);">
-            <h2><%= game.metro_station %></h2>
-        </div>
+        <h2><%= game.metro_station %></h2>
+<!--   <div class="card-picture" style="background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url(<%= game.photo %>);"> -->
         <% end %>
-
-  <!--       Card-footer -->
-          <div class="card-footer">
-            <h4><%= game.date.strftime('%a %d %b %Y') %>, <%= game.time.strftime('%l:%Mpm') %></h4>
-              <p>Number of players: <strong><%= game.number_of_players / 2 - 1 %> x <%= game.number_of_players / 2 - 1 %></strong></p>
-              <p>Price: <%= humanized_money_with_symbol(game.price) %></p>
-          </div>
-
         </div>
       </div>
     <% end %>
   <% end %>
 </div>
+
+
