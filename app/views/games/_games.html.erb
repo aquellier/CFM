@@ -4,16 +4,21 @@
       <div class="col-xs-12">
         <div class="card">
   <!--         Check if the game is full and return the card-picture accordingly -->
-          <h4><%= game.date.strftime('%a %d %b %Y') %>, <%= game.time.strftime('%l:%Mpm') %></h4>
-            <p>Number of players: <strong><%= game.number_of_players / 2 - 1 %> x <%= game.number_of_players / 2 - 1 %></strong></p>
-            <p>Price: <%= humanized_money_with_symbol(game.price) %></p>
         <% if game.bookings.length == 2 %>
-        <div class="filter-full">
-            <h2><%= game.metro_station %></h2>
+        <div class=filter-full">
+          <span class="full-sticker"><p>Full</p></span>
+          <div class="avatar"><%= game.photo %></div>
+          <h2><%= game.metro_station %></h2>
+          <h4><%= game.date.strftime('%a %d %b %Y') %>, <%= game.time.strftime('%l:%Mpm') %></h4>
+          <p>Number of players: <strong><%= game.number_of_players / 2 - 1 %> x <%= game.number_of_players / 2 - 1 %></strong></p>
+            <p>Price: <%= humanized_money_with_symbol(game.price) %></p>
         </div>
-        <span class="full-sticker"><p>Full</p></span>
         <% else %>
-        <h2><%= game.metro_station %></h2>
+          <div class="avatar-big" style="background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url(<%= game.photo %>);"></div>
+          <h2><%= game.metro_station %></h2>
+          <h4><%= game.date.strftime('%a %d %b %Y') %>, <%= game.time.strftime('%l:%Mpm') %></h4>
+          <p>Number of players: <strong><%= game.number_of_players / 2 - 1 %> x <%= game.number_of_players / 2 - 1 %></strong></p>
+          <p>Price: <%= humanized_money_with_symbol(game.price) %></p>
 <!--   <div class="card-picture" style="background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url(<%= game.photo %>);"> -->
         <% end %>
         </div>
