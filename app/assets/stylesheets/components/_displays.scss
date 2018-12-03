@@ -10,6 +10,7 @@
   position: absolute;
   padding-left: 20px;
   padding-right: 20px;
+  // transition: 0.2s;
 }
 .players-list {
   border-left: 1px solid $gray;
@@ -17,6 +18,11 @@
     text-align: center;
   }
   min-height: calc(100vh - 70px);
+}
+
+.full-games-container {
+  width: 100% !important;
+  transition: 0.4s;
 }
 
 .player-cell {

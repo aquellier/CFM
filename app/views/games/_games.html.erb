@@ -18,25 +18,25 @@
           <div class="avatar-medium creator" style="background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url(<%= game.creator.photo_fake %>);"></div>
           <p>Created by<br><strong><%= game.creator.first_name %></strong></p>
         </div>
-          <div class="card-item game-date">
-            <i class="far fa-calendar-alt"></i>
-            <p><%= game.date.strftime('%a %d %b %Y') %></p>
-          </div>
-          <div class="card-item game-time">
-            <i class="far fa-clock"></i>
-            <p><%= game.time.strftime('%l:%Mpm') %></p>
-          </div>
-          <div class="card-item game-location">
-            <i class="fas fa-map-marker-alt"></i>
-            <p><%= game.metro_station %></p>
-          </div>
-          <div class="card-item">
-            <i class="fas fa-euro-sign"></i>
-            <p><%= humanized_money_with_symbol(game.price) %></p>
-          </div>
-          <div class="card-item number-of-players">
-            <p><%= game.bookings.length %> / <%= game.number_of_players %></strong></p>
-          </div>
+        <div class="card-item game-date">
+          <i class="far fa-calendar-alt"></i>
+          <p><%= game.date.strftime('%a %d %b %Y') %></p>
+        </div>
+        <div class="card-item game-time">
+          <i class="far fa-clock"></i>
+          <p><%= game.time.strftime('%l:%Mpm') %></p>
+        </div>
+        <div class="card-item game-location">
+          <i class="fas fa-map-marker-alt"></i>
+          <p><%= game.metro_station %></p>
+        </div>
+        <div class="card-item">
+          <i class="fas fa-euro-sign"></i>
+          <p><%= humanized_money_with_symbol(game.price) %></p>
+        </div>
+        <div class="card-item number-of-players">
+          <p><%= game.bookings.length %> / <%= game.number_of_players %></strong></p>
+        </div>
 <!--   <div class="card-picture" style="background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url(<%= game.photo %>);"> -->
         <% end %>
         </div>
