@@ -1,10 +1,12 @@
 <div class="banner-profile">
   <div class="profile-content">
     <!-- profile picture and name -->
-    <% if current_user.photo.model[:photo] == nil %>
-          <%= image_tag "https://collaborativecbt.com/wp-content/uploads/2016/12/default-avatar.png", class: "avatar-profile"%>
+    <% if current_user.photo_fake != nil%>
+      <%= image_tag current_user.photo_fake, crop: :thumb, gravity: :face, class: "avatar-profile"%>
+    <% elsif current_user.model[:photo] == nil %>
+      <%= image_tag "https://collaborativecbt.com/wp-content/uploads/2016/12/default-avatar.png", class: "avatar-profile"%>
     <% else %>
-          <%= cl_image_tag current_user.photo, crop: :thumb, gravity: :face, class: "avatar-profile"%>
+      <%= cl_image_tag current_user.photo, crop: :thumb, gravity: :face, class: "avatar-profile"%>
     <% end %>
     <h3><%= current_user.first_name %> <%= current_user.last_name %></h3>
 

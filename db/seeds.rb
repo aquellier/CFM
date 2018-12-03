@@ -26,100 +26,110 @@ games_attributes = []
   case day.strftime("%a")
   when "Mon"
     Game.create!({
-      date:           day.strftime("%a %d %b %Y"),
-      time:           "20:00:00",
-      location:       "R. Olivença 1585, 1900-379 Lisboa",
-      metro_station:  "Olaias",
-      photo:          "https://lh-i.global.ssl.fastly.net/images/holidays/db340a75354d2365859548be347f0f0fefa03019/portugal/lisbon/olaias-park-hotel-0.jpg?width=720&auto=webp&fit=crop&height=387",
-      number_of_players:        16,
-      price_cents:          400
+      date:              day.strftime("%a %d %b %Y"),
+      time:              "20:00:00",
+      location:          "R. Olivença 1585, 1900-379 Lisboa",
+      metro_station:     "Olaias",
+      photo:             "https://lh-i.global.ssl.fastly.net/images/holidays/db340a75354d2365859548be347f0f0fefa03019/portugal/lisbon/olaias-park-hotel-0.jpg?width=720&auto=webp&fit=crop&height=387",
+      number_of_players: 16,
+      price_cents:       400,
+      creator_id:        1
     })
   when "Tue"
     Game.create!({
-      date:           day.strftime("%a %d %b %Y"),
-      time:           "21:00:00",
-      location:       "R. Olivença 1585, 1900-379 Lisboa",
-      metro_station:  "Olaias",
-      photo:          "https://lh-i.global.ssl.fastly.net/images/holidays/db340a75354d2365859548be347f0f0fefa03019/portugal/lisbon/olaias-park-hotel-0.jpg?width=720&auto=webp&fit=crop&height=387",
-      number_of_players:        16,
-      price_cents:          400
+      date:              day.strftime("%a %d %b %Y"),
+      time:              "21:00:00",
+      location:          "R. Olivença 1585, 1900-379 Lisboa",
+      metro_station:     "Olaias",
+      photo:             "https://lh-i.global.ssl.fastly.net/images/holidays/db340a75354d2365859548be347f0f0fefa03019/portugal/lisbon/olaias-park-hotel-0.jpg?width=720&auto=webp&fit=crop&height=387",
+      number_of_players: 16,
+      price_cents:       400,
+      creator_id:        1
     })
   when "Wed"
     Game.create!({
-      date:           day.strftime("%a %d %b %Y"),
-      time:           "20:00:00",
-      location:       "R. Olivença 1585, 1900-379 Lisboa",
-      metro_station:  "Olaias",
-      photo:          "https://lh-i.global.ssl.fastly.net/images/holidays/db340a75354d2365859548be347f0f0fefa03019/portugal/lisbon/olaias-park-hotel-0.jpg?width=720&auto=webp&fit=crop&height=387",
-      number_of_players:        16,
-      price_cents:          400
+      date:              day.strftime("%a %d %b %Y"),
+      time:              "20:00:00",
+      location:          "R. Olivença 1585, 1900-379 Lisboa",
+      metro_station:     "Olaias",
+      photo:             "https://lh-i.global.ssl.fastly.net/images/holidays/db340a75354d2365859548be347f0f0fefa03019/portugal/lisbon/olaias-park-hotel-0.jpg?width=720&auto=webp&fit=crop&height=387",
+      number_of_players: 16,
+      price_cents:       400,
+      creator_id:        1
     })
     Game.create!({
-      date:           day.strftime("%a %d %b %Y"),
-      time:           "21:00:00",
-      location:       "Praça de Espanha, Lisboa",
-      metro_station:  "Praça de Espanha",
-      photo:          "https://mediaserver2.rr.pt/newrr/praca_de_espanha_foto_dr6678053d.jpg",
-      number_of_players:        16,
-      price_cents:          400
+      date:              day.strftime("%a %d %b %Y"),
+      time:              "21:00:00",
+      location:          "Praça de Espanha, Lisboa",
+      metro_station:     "Praça de Espanha",
+      photo:             "https://mediaserver2.rr.pt/newrr/praca_de_espanha_foto_dr6678053d.jpg",
+      number_of_players: 16,
+      price_cents:       400,
+      creator_id:        1
     })
   when "Thu"
     Game.create!({
-      date:           day.strftime("%a %d %b %Y"),
-      time:           "19:00:00",
-      location:       "Praça de Espanha, Lisboa",
-      metro_station:  "Praça de Espanha",
-      photo:          "https://mediaserver2.rr.pt/newrr/praca_de_espanha_foto_dr6678053d.jpg",
-      number_of_players:        16,
-      price_cents:          400
+      date:              day.strftime("%a %d %b %Y"),
+      time:              "19:00:00",
+      location:          "Praça de Espanha, Lisboa",
+      metro_station:     "Praça de Espanha",
+      photo:             "https://mediaserver2.rr.pt/newrr/praca_de_espanha_foto_dr6678053d.jpg",
+      number_of_players: 16,
+      price_cents:       400,
+      creator_id:        1
     })
     Game.create!({
-      date:           day.strftime("%a %d %b %Y"),
-      time:           "20:00:00",
-      location:       "Praça de Espanha, Lisboa",
-      metro_station:  "Praça de Espanha",
-      photo:          "https://mediaserver2.rr.pt/newrr/praca_de_espanha_foto_dr6678053d.jpg",
-      number_of_players:        16,
-      price_cents:          400
+      date:              day.strftime("%a %d %b %Y"),
+      time:              "20:00:00",
+      location:          "Praça de Espanha, Lisboa",
+      metro_station:     "Praça de Espanha",
+      photo:             "https://mediaserver2.rr.pt/newrr/praca_de_espanha_foto_dr6678053d.jpg",
+      number_of_players: 16,
+      price_cents:       400,
+      creator_id:        1
     })
   when "Fri"
     Game.create!({
-      date:           day.strftime("%a %d %b %Y"),
-      time:           "21:00:00",
-      location:       "R. Olivença 1585, 1900-379 Lisboa",
-      metro_station:  "Olaias",
-      photo:          "https://lh-i.global.ssl.fastly.net/images/holidays/db340a75354d2365859548be347f0f0fefa03019/portugal/lisbon/olaias-park-hotel-0.jpg?width=720&auto=webp&fit=crop&height=387",
-      number_of_players:        16,
-      price_cents:          400
+      date:              day.strftime("%a %d %b %Y"),
+      time:              "21:00:00",
+      location:          "R. Olivença 1585, 1900-379 Lisboa",
+      metro_station:     "Olaias",
+      photo:             "https://lh-i.global.ssl.fastly.net/images/holidays/db340a75354d2365859548be347f0f0fefa03019/portugal/lisbon/olaias-park-hotel-0.jpg?width=720&auto=webp&fit=crop&height=387",
+      number_of_players: 16,
+      price_cents:       400,
+      creator_id:        1
     })
   when "Sat"
     Game.create!({
-      date:           day.strftime("%a %d %b %Y"),
-      time:           "11:00:00",
-      location:       "Praça de Espanha, Lisboa",
-      metro_station:  "Praça de Espanha",
-      photo:          "https://mediaserver2.rr.pt/newrr/praca_de_espanha_foto_dr6678053d.jpg",
-      number_of_players:        16,
-      price_cents:          400
+      date:              day.strftime("%a %d %b %Y"),
+      time:              "11:00:00",
+      location:          "Praça de Espanha, Lisboa",
+      metro_station:     "Praça de Espanha",
+      photo:             "https://mediaserver2.rr.pt/newrr/praca_de_espanha_foto_dr6678053d.jpg",
+      number_of_players: 16,
+      price_cents:       400,
+      creator_id:        1
     })
     Game.create!({
-      date:           day.strftime("%a %d %b %Y"),
-      time:           "19:00:00",
-      location:       "Praça de Espanha, Lisboa",
-      metro_station:  "Praça de Espanha",
-      photo:          "https://mediaserver2.rr.pt/newrr/praca_de_espanha_foto_dr6678053d.jpg",
-      number_of_players:        16,
-      price_cents:          400
+      date:              day.strftime("%a %d %b %Y"),
+      time:              "19:00:00",
+      location:          "Praça de Espanha, Lisboa",
+      metro_station:     "Praça de Espanha",
+      photo:             "https://mediaserver2.rr.pt/newrr/praca_de_espanha_foto_dr6678053d.jpg",
+      number_of_players: 16,
+      price_cents:       400,
+      creator_id:        1
     })
   when "Sun"
     Game.create!({
-      date:           day.strftime("%a %d %b %Y"),
-      time:           "19:00:00",
-      location:       "R. Olivença 1585, 1900-379 Lisboa",
-      metro_station:  "Olaias",
-      photo:          "https://lh-i.global.ssl.fastly.net/images/holidays/db340a75354d2365859548be347f0f0fefa03019/portugal/lisbon/olaias-park-hotel-0.jpg?width=720&auto=webp&fit=crop&height=387",
-      number_of_players:        16,
-      price_cents:          400
+      date:              day.strftime("%a %d %b %Y"),
+      time:              "19:00:00",
+      location:          "R. Olivença 1585, 1900-379 Lisboa",
+      metro_station:     "Olaias",
+      photo:             "https://lh-i.global.ssl.fastly.net/images/holidays/db340a75354d2365859548be347f0f0fefa03019/portugal/lisbon/olaias-park-hotel-0.jpg?width=720&auto=webp&fit=crop&height=387",
+      number_of_players: 16,
+      price_cents:       400,
+      creator_id:        1
     })
   end
 end
@@ -134,7 +144,7 @@ users_attributes = [
     nationality: "portuguese",
     date_of_birth: "20/09/1986",
     position: "attacker",
-    photo: "7918959_cb54c8e...3bbca-1_1000x625",
+    photo_fake: "https://inspirationseek.com/wp-content/uploads/2014/06/Cristiano-Ronaldo-Portugal-Hairstyle-2013.jpg",
     size: 178,
     weight: 76,
     phone_number: "+336000000000"
@@ -147,7 +157,7 @@ users_attributes = [
     nationality: "argentinian",
     date_of_birth: "20/10/1988",
     position: "attacker",
-    photo: "lionel-messi-ba...33u18x5tg5m8enm8",
+    photo_fake: "https://i.f1g.fr/media/figaro/805x453_crop/2017/10/25/XVMec083c12-b965-11e7-8bd2-4d87b82d3252.jpg",
     size: 178,
     weight: 76,
     phone_number: "+336000000000"
@@ -160,7 +170,7 @@ users_attributes = [
     nationality: "brazilian",
     date_of_birth: "10/06/1985",
     position: "defender",
-    photo: "29241-1462893880",
+    photo_fake: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/20180610_FIFA_Friendly_Match_Austria_vs._Brazil_Thiago_Silva_850_1582.jpg/280px-20180610_FIFA_Friendly_Match_Austria_vs._Brazil_Thiago_Silva_850_1582.jpg",
     size: 178,
     weight: 76,
     phone_number: "+336000000000"
@@ -173,7 +183,7 @@ users_attributes = [
     nationality: "french",
     date_of_birth: "20/11/1991",
     position: "midfielder",
-    photo: "https://pbs.twimg.com/profile_images/1019597917806526464/-ks541OM_400x400.jpg",
+    photo_fake: "https://s.yimg.com/ny/api/res/1.2/PT6wwkyQEZZYc1HiERKjhg--~A/YXBwaWQ9aGlnaGxhbmRlcjtzbT0xO3c9ODAw/http://media.zenfs.com/fr-FR/homerun/fr.article.90minutes.com/04d4f122fda1b69c46f77d88cfa23fc7",
     size: 178,
     weight: 76,
     phone_number: "+336000000000"
@@ -186,11 +196,12 @@ users_attributes = [
     nationality: "german",
     date_of_birth: "15/04/1986",
     position: "goalkeeper",
-    photo: "250px-20180602_...l_Neuer_850_0723",
+    photo_fake: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/10/20180602_FIFA_Friendly_Match_Austria_vs._Germany_Manuel_Neuer_850_0723.jpg/250px-20180602_FIFA_Friendly_Match_Austria_vs._Germany_Manuel_Neuer_850_0723.jpg",
     size: 178,
     weight: 76,
     phone_number: "+336000000000"
   }
+
 ]
 
 # Game.create!(games_attributes)
