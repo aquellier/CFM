@@ -2,7 +2,7 @@ class GamesController < ApplicationController
   skip_before_action :authenticate_user!, only: [ :index, :show ]
   before_action :set_game, only: [:show, :edit, :update, :destroy]
   def index
-    @games = Game.where(:date => Date.today..Date.today + 14)
+    @games = Game.where(:date => Date.today..Date.today + 14).order(:date).order(:time)
     @markers = @games.map do |game|
       {
         lng: game.longitude,
