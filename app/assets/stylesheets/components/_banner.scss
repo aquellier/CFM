@@ -4,7 +4,7 @@
 
 .banner {
   background:
-  linear-gradient(-225deg, rgba(0, 0, 0,0.6) 0%, rgba(0, 0, 0,0.6) 50%),
+  linear-gradient(-225deg, rgba(0, 0, 0,0.3) 0%, rgba(0, 0, 0,0.3) 50%),
   // url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAJElEQVQYV2NkQAX/GaH8NAYGhpkMDAyMMIH/IA5IEkTAOSABAIRGBARyOsGQAAAAAElFTkSuQmCC) repeat,
   url('https://i.pinimg.com/originals/5d/fe/73/5dfe73f627b97ef5a2ea1baa6d817dcf.jpg')bottom;
   background-size: cover;
@@ -32,7 +32,7 @@
   font-size: 25px;
   font-weight: lighter;
   color: rgb(255, 255, 255);
-  opacity: 0.6;
+  opacity: 0.8;
   margin-bottom: 30px;
 }
 
