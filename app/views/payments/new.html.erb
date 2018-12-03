@@ -1,8 +1,8 @@
 <h1>Purchase of Game <%= @booking.game_id %></h1>
 <%= form_tag booking_payments_path(@booking) do %>
   <article>
-    <label class="price">
-      <span>price: <%= humanized_money_with_symbol(@booking.price) %></span>
+    <label class="amount">
+      <span>amount: <%= humanized_money_with_symbol(@booking.amount) %></span>
     </label>
   </article>
 
@@ -11,6 +11,6 @@
     data-name="My game"
     data-email="<%= current_user.email %>"
     data-description="game <%= @booking.game_id %>"
-    data-price="<%= @booking.price_cents %>"
-    data-currency="<%= @booking.price.currency %>"></script>
+    data-amount="<%= @booking.amount_cents %>"
+    data-currency="<%= @booking.amount.currency %>"></script>
 <% end %>

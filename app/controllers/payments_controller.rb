@@ -12,9 +12,9 @@ class PaymentsController < ApplicationController
 
     charge = Stripe::Charge.create(
       customer:     customer.id,   # You should store this customer id and re-use it.
-      price:       @booking.price_cents,
+      amount:       @booking.amount_cents,
       description:  "Payment for game #{@booking.game_id} for booking #{@booking.id}",
-      currency:     @booking.price.currency
+      currency:     @booking.amount.currency
     )
 
     @booking.update(payment: charge.to_json, state: 'paid')

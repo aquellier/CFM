@@ -15,7 +15,7 @@ class BookingsController < ApplicationController
     @game = Game.find(params[:game_id])
     @booking.game = @game
     @booking.user = current_user
-    @booking = Booking.create!(game: @game, price: @booking.game.price, state: 'pending', user: current_user)
+    @booking = Booking.create!(game: @game, amount: @booking.game.price, state: 'pending', user: current_user)
     redirect_to new_booking_payment_path(@booking)
   end
 
@@ -26,7 +26,7 @@ class BookingsController < ApplicationController
   private
 
   def booking_params
-    params.require(:booking).permit(:price, :state, :user)
+    params.require(:booking).permit(:amount, :state, :user)
   end
 
   def set_game
