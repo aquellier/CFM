@@ -1,5 +1,5 @@
 class Booking < ApplicationRecord
   belongs_to :game, optional: true
   belongs_to :user
-  monetize :amount_cents
+  monetize :price_cents
 end

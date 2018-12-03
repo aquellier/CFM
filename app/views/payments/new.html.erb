@@ -11,6 +11,6 @@
     data-name="My game"
     data-email="<%= current_user.email %>"
     data-description="game <%= @booking.game_id %>"
-    data-amount="<%= @booking.amount_cents %>"
+    data-amount="<%= @booking.price_cents %>"
     data-currency="<%= @booking.amount.currency %>"></script>
 <% end %>

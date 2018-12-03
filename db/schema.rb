@@ -19,7 +19,7 @@ ActiveRecord::Schema.define(version: 2018_12_03_170444) do
     t.bigint "game_id"
     t.bigint "user_id"
     t.string "state"
-    t.integer "amount_cents", default: 0, null: false
+    t.integer "price_cents", default: 0, null: false
     t.json "payment"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
