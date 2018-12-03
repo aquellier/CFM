@@ -26,6 +26,7 @@ class GamesController < ApplicationController
 
   def create
     @game = Game.new(game_params)
+    define_location
     if @game.save
       redirect_to games_path
     else
@@ -58,13 +59,16 @@ class GamesController < ApplicationController
     @game = Game.find(params[:id])
   end
 
-  # def define_address
-  #   if @game.metro_station == "Olais"
-  #     @game.
-  #   elsif game.metro_station == "Praça de"
-  #   elsif game.metro_station == "Olais"
-  #   elsif game.metro_station == "Olais"
-  #   end
-  # end
+  def define_location
+    if @game.metro_station == "Olaias"
+      @game.location = "R. Olivença 1585, 1900-379 Lisboa"
+    elsif @game.metro_station == "Praça de Espanha"
+      @game.location = "Praça de Espanha, Lisboa"
+    elsif @game.metro_station == "Anjos"
+      @game.location = "Anjos, Lisboa"
+    elsif @game.metro_station == "Campo Pequeno"
+      @game.location = "Campo Pequeno,Lisboa"
+    end
+  end
 
 end
