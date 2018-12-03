@@ -17,7 +17,6 @@ class BookingsController < ApplicationController
     @booking.user = current_user
     @booking = Booking.create!(game: @game, amount: @booking.game.price, state: 'pending', user: current_user)
     redirect_to new_booking_payment_path(@booking)
-
   end
 
   def destroy
@@ -33,5 +32,9 @@ class BookingsController < ApplicationController
   def set_game
     @game = Game.find(params[:game_id])
   end
+
+  # def booking_status
+  #   if
+  # end
 
 end
