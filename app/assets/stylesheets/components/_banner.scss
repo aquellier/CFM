@@ -5,7 +5,7 @@
   url('https://i.pinimg.com/originals/5d/fe/73/5dfe73f627b97ef5a2ea1baa6d817dcf.jpg')bottom;
   background-size: cover;
   background-attachment: fixed;
-  color: white;
+  color: $pearl-white;
   text-align: center;
   height: calc(100vh);
   /* if you have a 70px navbar => height: calc(100vh - 70px); */
@@ -33,6 +33,9 @@
 }
 
 .home-section {
-  background-color: $brownie;
   height: 100vh;
+}
+
+.white-section {
+  background-color: $pearl-white;
 }
