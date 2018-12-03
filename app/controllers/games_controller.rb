@@ -27,6 +27,7 @@ class GamesController < ApplicationController
   def create
     @game = Game.new(game_params)
     define_location
+    @game.creator = current_user
     if @game.save
       redirect_to games_path
     else

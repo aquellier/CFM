@@ -22,7 +22,7 @@ puts 'Creating games and users...'
 # Saturday 11h e 19h 7vs7 Olaias
 # Sunday 19h 7vs7 Olaias
 games_attributes = []
-(Date.today..Date.today + 365).each do |day|
+(Date.today..Date.today + 14).each do |day|
   case day.strftime("%a")
   when "Mon"
     Game.create!({
