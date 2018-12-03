@@ -15,7 +15,7 @@ class BookingsController < ApplicationController
     @game = Game.find(params[:game_id])
     @booking.game = @game
     @booking.user = current_user
-    @booking = Booking.create!(amount: @booking.game.price, state: 'pending', user: current_user)
+    @booking = Booking.create!(game: @game, amount: @booking.game.price, state: 'pending', user: current_user)
     redirect_to new_booking_payment_path(@booking)
 
   end
