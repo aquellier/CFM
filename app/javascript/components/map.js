@@ -1,4 +1,5 @@
 import GMaps from 'gmaps/gmaps.js';
+import styles from './styles.js';
 
 function initMapShow() {
   console.log('hello from map show');
@@ -33,6 +34,12 @@ function initMapIndex() {
     } else {
       map.fitLatLngBounds(markers);
     }
+
+    map.addStyle({
+      styles: styles,
+      mapTypeId: 'map_style'
+    });
+    map.setStyle('map_style');
   }
 }
 

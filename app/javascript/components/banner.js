@@ -1,11 +1,10 @@
-import Typed from 'typed.js';
-
-function loadDynamicBannerText() {
-  new Typed('#banner-typed-text', {
-    strings: ["Play football in Lisbon", "Anytime", "Anywhere"],
-    typeSpeed: 30,
-    loop: true
-  });
+function fadeOut() {
+  console.log('hello from fadeOut');
+  const bannerContent = document.querySelector('.banner-content');
+  let opacity = 1 - (scrollY/300);
+  if (opacity >= 0) {
+      $(bannerContent).css('opacity', opacity);
+  }
 }
 
-export { loadDynamicBannerText };
+export { fadeOut };

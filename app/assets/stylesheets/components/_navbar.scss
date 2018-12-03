@@ -10,16 +10,12 @@
 
 .navbar-cfm-transparent {
   background-color: transparent;
-  transition: 0.5s background-color ease;
-
-  .navbar-cfm-link {
-    color: white;
-  }
+  transition: 0.8s background-color ease;
 }
 
 .navbar-cfm-filled {
   box-shadow: 0 1px 5px 0 rgba(0,0,0,0.07),0 1px 0 0 rgba(0,0,0,0.03);
-  background-color: white;
+  background-color: $brownie;
 }
 
 /* Logo */
@@ -49,7 +45,7 @@
 
 /* Navbar link */
 .navbar-cfm-link {
-  color: $gray;
+  color: $light-gray;
   font-size: 14px;
 }
 .navbar-cfm-link:hover {
