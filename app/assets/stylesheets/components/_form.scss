@@ -1,53 +1,34 @@
-.form-signup {
-    background: $pearl-white;
-    color: $brownie;
-    padding: 25px;
-    margin-top: 20px;
-    border-radius: 4px;
-    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
-    height: 600px;
-    overflow: scroll;
-    h2 {
-      font-size: 26px;
-      margin-bottom: 30px;
-      text-align: left;
-      font-weight: bold;
-    }
-    .btn {
-      width: 100%;
-      margin-bottom: 15px;
-    }
-    a {
-      color: $brownie;
-    }
-    a:hover {
-      text-decoration: none;
-    }
+.form-design {
+  text-align: left;
+  background: $pearl-white;
+  color: $brownie;
+  padding: 25px;
+  margin-top: 20px;
+  border-radius: 4px;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+  overflow: scroll;
+  h2 {
+    font-size: 26px;
+    margin-bottom: 30px;
+    font-weight: bold;
+  }
+  .btn-primary {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  a {
+    color: $green;
+  }
+  a:hover {
+    text-decoration: none;
+  }
+  h6 {
+    color: $red;
+  }
 }
 
-.form-login {
-    background: $pearl-white;
-    color: $brownie;
-    padding: 25px;
-    margin-top: 20px;
-    border-radius: 4px;
-    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
-    h2 {
-      font-size: 26px;
-      margin-bottom: 30px;
-      text-align: left;
-      font-weight: bold;
-    }
-    .btn {
-      width: 100%;
-      margin-bottom: 15px;
-    }
-    a {
-      color: $brownie;
-    }
-    a:hover {
-      text-decoration: none;
-    }
+.long-form {
+  height: 600px;
 }
 
 .date-input{

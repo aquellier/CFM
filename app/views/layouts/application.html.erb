@@ -11,7 +11,7 @@
   </head>
   <body class="<%= controller_name %> <%= action_name %>"  >
     <%= render 'shared/navbar' unless devise_controller? %>
-    <div class="<%= "page-wrapper" unless action_name == "home" %>">
+    <div class="<%= "page-wrapper" unless action_name == "home" || devise_controller? %>">
       <%= yield %>
     </div>
     <%= javascript_include_tag "https://maps.googleapis.com/maps/api/js?libraries=places&key=#{ENV['GOOGLE_API_BROWSER_KEY']}" %>
