@@ -44,9 +44,17 @@
   margin: 20px;
   align-items: center;
   color: $brownie;
+  p {
+    margin-bottom: 0;
+  }
+}
+
+.game-detail {
+  margin: 12.5px 0;
 }
 
 .space-stuff {
   display: flex;
   justify-content: space-between;
 }
+
