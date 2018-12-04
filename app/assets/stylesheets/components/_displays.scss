@@ -43,4 +43,10 @@
   padding: 20px;
   margin: 20px;
   align-items: center;
+  color: $brownie;
+}
+
+.space-stuff {
+  display: flex;
+  justify-content: space-between;
 }
