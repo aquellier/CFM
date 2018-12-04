@@ -22,6 +22,8 @@ gem 'webpacker'
 gem 'geocoder'
 gem 'money-rails'
 gem 'stripe'
+gem 'omniauth-facebook'
+
 
 group :development do
   gem 'web-console', '>= 3.3.0'
