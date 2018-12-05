@@ -1,18 +1,34 @@
 .table-dashboard {
-   border-top: 2px solid rgb(200, 200, 200);
-   border-bottom: 2px solid rgb(200, 200, 200);
+   border-top: 2px solid $pearl-white;
+   border-bottom: 2px solid $pearl-white;
    width: 80%;
    margin: 60px auto;
    font-size: 14px;
-   text-align: center;
    th, td {
     align: center;
-    text-align: center;
+    text-align: left;
     height: 50px;
     vertical-align: middle;
    }
+   text-align: center;
 }
 
+.table-games {
+   width: 100%;
+   font-size: 14px;
+   th {
+      height: 60px;
+      border-bottom: 2px solid $pearl-white;
+   }
+   td {
+    align: center;
+    text-align: left;
+    vertical-align: middle;
+    height: 60px;
+    border-bottom: 1px solid $gray;
+   }
+   text-align: center;
+}
 // .table-dashboard-user{
 //    border-top: 2px solid rgb(200, 200, 200);
 //    border-bottom: 2px solid rgb(200, 200, 200);

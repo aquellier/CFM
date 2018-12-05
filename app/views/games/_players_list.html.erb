@@ -1,11 +1,25 @@
-<% @game.bookings.each do |booking| %>
-  <div class="player-cell">
-    <% if booking.user.photo.model[:photo] == nil %>
-      <%= image_tag "https://collaborativecbt.com/wp-content/uploads/2016/12/default-avatar.png", width: 100, height: 100, class: "avatar-small" %>
-    <% else %>
-      <%= cl_image_tag current_user.photo, width: 100, height: 100, crop: :thumb, gravity: :face, class: "avatar-small"%>
+<table class="table-games">
+  <tbody>
+    <thead>
+      <th></th>
+      <th>Name</th>
+      <th>Position</th>
+    </thead>
+    <% @game.bookings.each do |booking| %>
+      <tr>
+        <td>
+          <% if booking.user.photo_fake != nil%>
+            <%= image_tag booking.user.photo_fake, width: 100, height: 100, crop: :fill, gravity: :face, class: "avatar-small"%>
+          <% elsif booking.user.photo? %>
+            <%= cl_image_tag booking.user.photo, width: 100, height: 100, crop: :fill, gravity: :face, class: "avatar-small"%>
+          <% else  %>
+            <% avatar_url = booking.user.facebook_picture_url || "http://placehold.it/30x30" %>
+            <%= image_tag avatar_url, class: "avatar-small" %>
+          <% end %>
+        </td>
+        <td><%= booking.user.first_name %> <%= booking.user.last_name %></td>
+        <td><%= booking.user.position %></td>
+      </tr>
     <% end %>
-    <p><%= booking.user.first_name %> <%= booking.user.last_name %></p>
-    <p><%= booking.user.position %></p>
-  </div>
-<% end %>
+  </tbody>
+</table>

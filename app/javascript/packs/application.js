@@ -1,5 +1,6 @@
 // Imports
 import "bootstrap";
+import './application.css';
 import { navbarScroll } from '../components/navbar';
 import  { initMapShow, initMapIndex } from '../components/map.js';
 import { calendar } from '../components/flatpickr';

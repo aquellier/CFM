@@ -2,9 +2,9 @@
   <div class="profile-content">
     <!-- profile picture and name -->
     <% if current_user.photo_fake != nil%>
-      <%= image_tag current_user.photo_fake, crop: :thumb, gravity: :face, class: "avatar-profile"%>
+      <%= image_tag current_user.photo_fake, width: 200, height: 200, crop: :fill, gravity: :face, class: "avatar-profile"%>
     <% elsif current_user.photo? %>
-      <%= cl_image_tag current_user.photo, crop: :thumb, gravity: :face, class: "avatar-profile"%>
+      <%= cl_image_tag current_user.photo, width: 200, height: 200, crop: :fill, gravity: :face, class: "avatar-profile"%>
     <% else  %>
       <% avatar_url = current_user.facebook_picture_url || "http://placehold.it/30x30" %>
       <%= image_tag avatar_url, class: "avatar-profile" %>

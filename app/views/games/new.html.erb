@@ -5,14 +5,9 @@
         <h2>Create a game</h2>
         <%= simple_form_for(@game) do |f| %>
           <div class="form-inputs">
-            <%= f.label :date, required: true %>
+            <%= f.label "Date", required: true %>
             <br>
-            <%= f.input_field :date, required: true, class: 'date-input' %>
             <input type="text" id="basicDate" placeholder="Please select Date Time" data-input>
-            <br>
-            <%= f.label :time, required: true %>
-            <br>
-            <%= f.input_field :time, required: true, class: 'date-input' %>
             <%= f.input :metro_station, required: true, :collection => ["Campo Pequeno", "Praça de Espanha", "Olaias", "Anjos"] %>
             <%= f.input :number_of_players, required: true, :collection => [12, 14, 16], hint: "* Remember to add one substitute per team" %>
           </div>
