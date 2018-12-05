@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   get 'contact', to: 'pages#contact'
   get '/profile', to: 'pages#profile'
+  get 'privacy', to: 'pages#privacy'
   resources :games
   resources :bookings, only: [ :show, :create] do
     resources :payments, only: [:new, :create]
