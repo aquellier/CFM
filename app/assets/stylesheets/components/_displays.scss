@@ -2,7 +2,7 @@
   width: 100%;
 }
 
-#games-container {
+.games-container {
   width: 60%;
   overflow-y: auto;
   height: calc(100vh - 130px);
@@ -12,6 +12,18 @@
   padding-right: 20px;
   // transition: 0.2s;
 }
+
+.full-games-container {
+  width: 100% !important;
+  transition: 0.4s;
+  overflow-y: auto;
+  height: calc(100vh - 130px);
+  left: 0;
+  position: absolute;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
 .players-list {
   border-left: 1px solid $gray;
   h2 {
@@ -20,10 +32,6 @@
   min-height: calc(100vh - 70px);
 }
 
-.full-games-container {
-  width: 100% !important;
-  transition: 0.4s;
-}
 
 .player-cell {
   display: flex;

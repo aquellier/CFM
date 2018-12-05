@@ -6,6 +6,7 @@ import { calendar } from '../components/flatpickr';
 import { hideShow } from '../components/hide.js';
 import { loadDynamicBannerText } from '../components/typed';
 import { fadeOut, changeButton } from '../components/banner';
+import { hideOnSmallScreen } from '../components/smallscreen';
 // Pages
 const indexPage = document.querySelector('.games.index');
 const showPage = document.querySelector('.games.show');
@@ -18,6 +19,7 @@ navbarScroll();
 if (indexPage) {
   initMapIndex();
   hideShow();
+  hideOnSmallScreen();
 }
 if (showPage) {
   initMapShow();

@@ -2,7 +2,7 @@ function hideShow() {
   const mapIndex = document.getElementById('map-index');
   const mapIndexContainer = document.getElementById('map-index-container');
   const button = document.getElementById('show-map');
-  const gamesContainer = document.getElementById('games-container');
+  const gamesContainer = document.querySelector('.games-container');
   if (mapIndex) {
     console.log('hello from hide');
     window.isMapOpen = true;
