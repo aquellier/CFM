@@ -5,20 +5,28 @@
         <div class="card">
   <!--         Check if the game is full and return the card-picture accordingly -->
           <div class="card-item game-creator">
-            <div class="avatar-medium creator" style="background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url(<%= game.creator.photo_fake %>);"></div>
+            <% user = game.creator %>
+            <% if user.photo_fake != nil%>
+              <%= image_tag user.photo_fake, width: 200, height: 200, crop: :fill, gravity: :face, class: "avatar-small"%>
+            <% elsif user.photo? %>
+              <%= cl_image_tag user.photo, width: 200, height: 200, crop: :fill, gravity: :face, class: "avatar-small"%>
+            <% else  %>
+              <% avatar_url = user.facebook_picture_url || "http://placehold.it/30x30" %>
+              <%= image_tag avatar_url, class: "avatar-small" %>
+            <% end %>
             <p>Created by<br><strong><%= game.creator.first_name %></strong></p>
           </div>
           <div class="card-item game-date">
             <i class="far fa-calendar-alt"></i>
-            <p><%= game.date.strftime('%a %d %b %Y') %></p>
+            <p><%= game.datetime.strftime('%a %d %b %Y') %></p>
           </div>
           <div class="card-item game-time">
             <i class="far fa-clock"></i>
-            <p><%= game.time.strftime('%l:%Mpm') %></p>
+            <p><%= game.datetime.strftime('%l:%Mpm') %></p>
           </div>
           <div class="card-item game-location">
             <i class="fas fa-map-marker-alt"></i>
-            <p><%= game.metro_station %></p>
+            <p><%= game.location %></p>
           </div>
           <div class="card-item">
             <i class="far fa-credit-card"></i>
@@ -27,7 +35,6 @@
           <div class="card-item number-of-players">
             <p><%= game.bookings.length %> / <%= game.number_of_players %></strong></p>
           </div>
-<!--   <div class="card-picture" style="background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url(<%= game.photo %>);"> -->
         </div>
       </div>
     <% end %>

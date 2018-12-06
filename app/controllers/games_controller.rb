@@ -2,7 +2,7 @@ class GamesController < ApplicationController
   skip_before_action :authenticate_user!, only: [ :index, :show ]
   before_action :set_game, only: [:show, :edit, :update, :destroy]
   def index
-    @games = Game.where(:date => Date.today..Date.today + 14).order(:date).order(:time)
+    @games = Game.where(:datetime => Date.today..Date.today + 14).order(:datetime)
     @markers = @games.map do |game|
       {
         lng: game.longitude,
@@ -53,7 +53,7 @@ class GamesController < ApplicationController
   private
 
   def game_params
-    params.require(:game).permit(:date, :time, :metro_station, :location, :number_of_players, )
+    params.require(:game).permit(:datetime, :metro_station, :location, :number_of_players, :price)
   end
 
   def set_game
@@ -61,14 +61,14 @@ class GamesController < ApplicationController
   end
 
   def define_location
-    if @game.metro_station == "Olaias"
-      @game.location = "R. Olivença 1585, 1900-379 Lisboa"
-    elsif @game.metro_station == "Praça de Espanha"
-      @game.location = "Praça de Espanha, Lisboa"
+    if @game.location == "UrbanSoccer - Porte d'Aubervilliers, Avenue Victor Hugo, Aubervilliers, France"
+      @game.metro_station = "Porte d'Aubervilliers"
+    elsif @game.location == "Praça de Espanha"
+      @game.metro_station = "Praça de Espanha, Lisboa"
     elsif @game.metro_station == "Anjos"
       @game.location = "Anjos, Lisboa"
-    elsif @game.metro_station == "Campo Pequeno"
-      @game.location = "Campo Pequeno,Lisboa"
+    elsif @game.location == "Campo Pequeno"
+      @game.metro_station = "Campo Pequeno,Lisboa"
     end
   end
 

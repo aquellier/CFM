@@ -5,8 +5,9 @@
       <th>Name</th>
       <th>Position</th>
     </thead>
-    <% @game.bookings.each do |booking| %>
+
       <tr>
+    <% @game.bookings.each do |booking| %>
         <td>
           <% if booking.user.photo_fake != nil%>
             <%= image_tag booking.user.photo_fake, width: 100, height: 100, crop: :fill, gravity: :face, class: "avatar-small"%>

@@ -8,6 +8,7 @@
     "flatpickr": "^4.5.2",
     "gmaps": "^0.4.24",
     "jquery": "^3.3.1",
+    "places.js": "^1.14.0",
     "typed.js": "^2.0.9"
   },
   "devDependencies": {

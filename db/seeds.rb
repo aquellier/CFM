@@ -26,109 +26,79 @@ games_attributes = []
   case day.strftime("%a")
   when "Mon"
     Game.create!({
-      date:              day.strftime("%a %d %b %Y"),
-      time:              "20:00:00",
-      location:          "R. Olivença 1585, 1900-379 Lisboa",
-      metro_station:     "Olaias",
-      photo:             "https://lh-i.global.ssl.fastly.net/images/holidays/db340a75354d2365859548be347f0f0fefa03019/portugal/lisbon/olaias-park-hotel-0.jpg?width=720&auto=webp&fit=crop&height=387",
+      datetime:          day.strftime("%a %d %b %Y 18:00"),
+      location:          "UrbanSoccer - Porte d'Aubervilliers, Avenue Victor Hugo, Aubervilliers, France",
       number_of_players: 16,
-      price_cents:       400,
+      price:       14.5,
       creator_id:        1
     })
   when "Tue"
     Game.create!({
-      date:              day.strftime("%a %d %b %Y"),
-      time:              "21:00:00",
-      location:          "R. Olivença 1585, 1900-379 Lisboa",
-      metro_station:     "Olaias",
-      photo:             "https://lh-i.global.ssl.fastly.net/images/holidays/db340a75354d2365859548be347f0f0fefa03019/portugal/lisbon/olaias-park-hotel-0.jpg?width=720&auto=webp&fit=crop&height=387",
+      datetime:          day.strftime("%a %d %b %Y 18:00"),
+      location:          "UrbanSoccer - La Défense, Avenue François Arago, Nanterre, France",
       number_of_players: 16,
-      price_cents:       400,
-      creator_id:        1
+      price:       16,
+      creator_id:        4
     })
   when "Wed"
     Game.create!({
-      date:              day.strftime("%a %d %b %Y"),
-      time:              "20:00:00",
-      location:          "R. Olivença 1585, 1900-379 Lisboa",
-      metro_station:     "Olaias",
-      photo:             "https://lh-i.global.ssl.fastly.net/images/holidays/db340a75354d2365859548be347f0f0fefa03019/portugal/lisbon/olaias-park-hotel-0.jpg?width=720&auto=webp&fit=crop&height=387",
+      datetime:          day.strftime("%a %d %b %Y 18:00"),
+      location:          "UrbanSoccer - La Défense, Avenue François Arago, Nanterre, France",
       number_of_players: 16,
-      price_cents:       400,
-      creator_id:        1
+      price:       12,
+      creator_id:        2
     })
     Game.create!({
-      date:              day.strftime("%a %d %b %Y"),
-      time:              "21:00:00",
-      location:          "Praça de Espanha, Lisboa",
-      metro_station:     "Praça de Espanha",
-      photo:             "https://mediaserver2.rr.pt/newrr/praca_de_espanha_foto_dr6678053d.jpg",
+      datetime:          day.strftime("%a %d %b %Y 18:00"),
+      location:          "UrbanSoccer - Puteaux, Rue de la République, Puteaux, France",
       number_of_players: 16,
-      price_cents:       400,
-      creator_id:        1
+      price:       10,
+      creator_id:        3
     })
   when "Thu"
     Game.create!({
-      date:              day.strftime("%a %d %b %Y"),
-      time:              "19:00:00",
-      location:          "Praça de Espanha, Lisboa",
-      metro_station:     "Praça de Espanha",
-      photo:             "https://mediaserver2.rr.pt/newrr/praca_de_espanha_foto_dr6678053d.jpg",
+      datetime:          day.strftime("%a %d %b %Y 18:00"),
+      location:          "UrbanSoccer - Puteaux, Rue de la République, Puteaux, France",
       number_of_players: 16,
-      price_cents:       400,
-      creator_id:        1
+      price:       10,
+      creator_id:        5
     })
     Game.create!({
-      date:              day.strftime("%a %d %b %Y"),
-      time:              "20:00:00",
-      location:          "Praça de Espanha, Lisboa",
-      metro_station:     "Praça de Espanha",
-      photo:             "https://mediaserver2.rr.pt/newrr/praca_de_espanha_foto_dr6678053d.jpg",
+      datetime:          day.strftime("%a %d %b %Y 18:00"),
+      location:          "UrbanSoccer - La Défense, Avenue François Arago, Nanterre, France",
       number_of_players: 16,
-      price_cents:       400,
+      price:       15.5,
       creator_id:        1
     })
   when "Fri"
     Game.create!({
-      date:              day.strftime("%a %d %b %Y"),
-      time:              "21:00:00",
-      location:          "R. Olivença 1585, 1900-379 Lisboa",
-      metro_station:     "Olaias",
-      photo:             "https://lh-i.global.ssl.fastly.net/images/holidays/db340a75354d2365859548be347f0f0fefa03019/portugal/lisbon/olaias-park-hotel-0.jpg?width=720&auto=webp&fit=crop&height=387",
+      datetime:          day.strftime("%a %d %b %Y 18:00"),
+      location:          "UrbanSoccer - La Défense, Avenue François Arago, Nanterre, France",
       number_of_players: 16,
-      price_cents:       400,
-      creator_id:        1
+      price:       10,
+      creator_id:        2
     })
   when "Sat"
     Game.create!({
-      date:              day.strftime("%a %d %b %Y"),
-      time:              "11:00:00",
-      location:          "Praça de Espanha, Lisboa",
-      metro_station:     "Praça de Espanha",
-      photo:             "https://mediaserver2.rr.pt/newrr/praca_de_espanha_foto_dr6678053d.jpg",
+      datetime:          day.strftime("%a %d %b %Y 18:00"),
+      location:          "UrbanSoccer - Asnières, Rue Henri Vuillemin, Gennevilliers, France",
       number_of_players: 16,
-      price_cents:       400,
-      creator_id:        1
+      price:       8,
+      creator_id:        3
     })
     Game.create!({
-      date:              day.strftime("%a %d %b %Y"),
-      time:              "19:00:00",
-      location:          "Praça de Espanha, Lisboa",
-      metro_station:     "Praça de Espanha",
-      photo:             "https://mediaserver2.rr.pt/newrr/praca_de_espanha_foto_dr6678053d.jpg",
+      datetime:          day.strftime("%a %d %b %Y 18:00"),
+      location:          "UrbanSoccer - Porte d'Aubervilliers, Avenue Victor Hugo, Aubervilliers, France",
       number_of_players: 16,
-      price_cents:       400,
-      creator_id:        1
+      price:       12,
+      creator_id:        5
     })
   when "Sun"
     Game.create!({
-      date:              day.strftime("%a %d %b %Y"),
-      time:              "19:00:00",
-      location:          "R. Olivença 1585, 1900-379 Lisboa",
-      metro_station:     "Olaias",
-      photo:             "https://lh-i.global.ssl.fastly.net/images/holidays/db340a75354d2365859548be347f0f0fefa03019/portugal/lisbon/olaias-park-hotel-0.jpg?width=720&auto=webp&fit=crop&height=387",
+      datetime:          day.strftime("%a %d %b %Y 18:00"),
+      location:          "UrbanSoccer - Asnières, Rue Henri Vuillemin, Gennevilliers, France",
       number_of_players: 16,
-      price_cents:       400,
+      price:       14,
       creator_id:        1
     })
   end

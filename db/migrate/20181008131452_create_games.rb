@@ -1,9 +1,9 @@
 class CreateGames < ActiveRecord::Migration[5.2]
   def change
     create_table :games do |t|
-      t.date     :date
-      t.time     :time
+      t.datetime :datetime
       t.string   :location
+      t.string   :metro_station
       t.integer  :number_of_players
 
       t.timestamps

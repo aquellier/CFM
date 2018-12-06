@@ -5,12 +5,12 @@
         <h2>Create a game</h2>
         <%= simple_form_for(@game) do |f| %>
           <div class="form-inputs">
-            <%= f.label "Date", required: true %>
-            <br>
-            <input type="text" id="basicDate" placeholder="Please select Date Time" data-input>
-            <%= f.input :metro_station, required: true, :collection => ["Campo Pequeno", "Praça de Espanha", "Olaias", "Anjos"] %>
+            <%= f.input :datetime, label: "Date & Time", required: true, as: :string, placeholder: "Please select a day and an hour" %>
+            <%= f.input :location, required: true %>
             <%= f.input :number_of_players, required: true, :collection => [12, 14, 16], hint: "* Remember to add one substitute per team" %>
+            <%= f.input :price %>
           </div>
+
 
           <div class="form-actions">
             <%= f.button :submit, "Create game", class: 'btn btn-primary' %>

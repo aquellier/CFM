@@ -28,14 +28,12 @@ ActiveRecord::Schema.define(version: 2018_12_05_083834) do
   end
 
   create_table "games", force: :cascade do |t|
-    t.date "date"
-    t.time "time"
+    t.datetime "datetime"
     t.string "location"
+    t.string "metro_station"
     t.integer "number_of_players"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "photo"
-    t.string "metro_station"
     t.float "latitude"
     t.float "longitude"
     t.integer "price_cents", default: 0, null: false

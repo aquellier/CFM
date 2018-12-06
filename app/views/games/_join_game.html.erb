@@ -1,6 +1,6 @@
 <!-- Game information -->
 <div class="join-game">
-  <h4>This game will take place <strong><%= @game.date.strftime('%a %d %b %Y') %></strong> at <strong><%= @game.time.strftime('%I:%M pm') %></strong> at <strong><%= @game.metro_station %></strong></h4>
+  <h4>This game will take place <strong><%= @game.datetime.strftime('%a %d %b %Y') %></strong> at <strong><%= @game.datetime.strftime('%I:%M pm') %></strong> at <strong><%= @game.location %></strong></h4>
 <!--   map box -->
 <div
   id="map-show"
@@ -11,7 +11,7 @@
 <div class="game-details">
   <% players = @game.bookings.to_a.map { |booking| booking.user } %>
   <div class="space-stuff">
-    <p><i class="far fa-calendar-alt"></i> <%= @game.date.strftime('%a %d %b %Y') %></p>
+    <p><i class="far fa-calendar-alt"></i> <%= @game.datetime.strftime('%a %d %b %Y') %></p>
     <div class="number-of-players">
       <h6>
         <%= @game.bookings.length %> / <%= @game.number_of_players %>
@@ -19,10 +19,10 @@
     </div>
   </div>
   <div class="game-detail">
-    <p><i class="far fa-clock"></i> <%= @game.time.strftime('%l:%Mpm') %></p>
+    <p><i class="far fa-clock"></i> <%= @game.datetime.strftime('%l:%Mpm') %></p>
   </div>
   <div class="game-detail">
-    <p><i class="fas fa-map-marker-alt"></i> <%= @game.metro_station %></p>
+    <p><i class="fas fa-map-marker-alt"></i> <%= @game.location %></p>
   </div>
   <div class="game-detail">
     <p><i class="far fa-credit-card"></i> <%= humanized_money_with_symbol(@game.price) %></p>

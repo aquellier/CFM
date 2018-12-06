@@ -8,11 +8,12 @@ import { hideShow } from '../components/hide.js';
 import { loadDynamicBannerText } from '../components/typed';
 import { fadeOut, changeButton } from '../components/banner';
 import { hideOnSmallScreen } from '../components/smallscreen';
+import { autocomplete } from '../components/autocomplete';
 // Pages
 const indexPage = document.querySelector('.games.index');
 const showPage = document.querySelector('.games.show');
 
-// Functions
+// Calling Functions
 loadDynamicBannerText();
 fadeOut();
 changeButton();
@@ -26,3 +27,4 @@ if (showPage) {
   initMapShow();
 }
 calendar();
+autocomplete();
