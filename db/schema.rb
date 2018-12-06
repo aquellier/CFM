@@ -30,7 +30,7 @@ ActiveRecord::Schema.define(version: 2018_12_05_083834) do
   create_table "games", force: :cascade do |t|
     t.datetime "datetime"
     t.string "location"
-    t.string "metro_station"
+    t.string "field"
     t.integer "number_of_players"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

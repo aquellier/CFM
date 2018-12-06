@@ -53,7 +53,7 @@ class GamesController < ApplicationController
   private
 
   def game_params
-    params.require(:game).permit(:datetime, :metro_station, :location, :number_of_players, :price)
+    params.require(:game).permit(:datetime, :field, :location, :number_of_players, :price)
   end
 
   def set_game
@@ -62,13 +62,13 @@ class GamesController < ApplicationController
 
   def define_location
     if @game.location == "UrbanSoccer - Porte d'Aubervilliers, Avenue Victor Hugo, Aubervilliers, France"
-      @game.metro_station = "Porte d'Aubervilliers"
+      @game.field = "Porte d'Aubervilliers"
     elsif @game.location == "Praça de Espanha"
-      @game.metro_station = "Praça de Espanha, Lisboa"
-    elsif @game.metro_station == "Anjos"
+      @game.field = "Praça de Espanha, Lisboa"
+    elsif @game.field == "Anjos"
       @game.location = "Anjos, Lisboa"
     elsif @game.location == "Campo Pequeno"
-      @game.metro_station = "Campo Pequeno,Lisboa"
+      @game.field = "Campo Pequeno,Lisboa"
     end
   end
 
