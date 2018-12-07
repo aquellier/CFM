@@ -4,6 +4,20 @@
 puts 'Cleaning database...'
 Game.destroy_all
 
+puts 'Creating fields...'
+fields = [ "UrbanSoccer - Angers", "UrbanSoccer - Asnières", "UrbanSoccer - Bordeaux Mérignac",
+           "UrbanSoccer - Bordeaux Pessac", "UrbanSoccer - Clermont Ferranc", "UrbanSoccer - Dijon",
+           "UrbanSoccer - Every Courcouronnes", "UrbanSoccer - Grenoble", "UrbanSoccer - Guyancourt",
+           "UrbanSoccer - La Défense", "UrbanSoccer - Lille Bondues", "UrbanSoccer - Lille Lezennes",
+           "UrbanSoccer - Lyon Barolles", "UrbanSoccer - Lyon Beynost", "UrbanSoccer - Lyon Parilly",
+           "UrbanSoccer - Marne la Vallée", "UrbanSoccer - Meudon", "UrbanSoccer - Montpellier",
+           "UrbanSoccer - Nantes", "UrbanSoccer - Orsay", "UrbanSoccer - Porte d'Aubervilliers",
+           "UrbanSoccer - Porte d'Ivry", "UrbanSoccer - Puteaux", "UrbanSoccer - Rennes Cap Malo",
+           "UrbanSoccer - Rennes Vern", "UrbanSoccer - Saint Étienne", "UrbanSoccer - Strasbourg",
+           "UrbanSoccer - Toulouse Montaudran", "UrbanSoccer - Toulouse Sept Deniers", "UrbanSoccer - Villeneuve Loubet",
+fields.each { |f| Field.create!(name: s) }
+puts "Created #{Field.count} skills!"
+
 puts 'Creating games and users...'
 
 
@@ -27,77 +41,87 @@ games_attributes = []
   when "Mon"
     Game.create!({
       datetime:          day.strftime("%a %d %b %Y 18:00"),
+      field:             "UrbanSoccer - Porte d'Aubervilliers"
       location:          "UrbanSoccer - Porte d'Aubervilliers, Avenue Victor Hugo, Aubervilliers, France",
-      number_of_players: 16,
+      number_of_players: 10,
       price:       14.5,
       creator_id:        1
     })
   when "Tue"
     Game.create!({
       datetime:          day.strftime("%a %d %b %Y 18:00"),
+      field:             "UrbanSoccer - La Défense",
       location:          "UrbanSoccer - La Défense, Avenue François Arago, Nanterre, France",
-      number_of_players: 16,
+      number_of_players: 10,
       price:       16,
       creator_id:        4
     })
   when "Wed"
     Game.create!({
       datetime:          day.strftime("%a %d %b %Y 18:00"),
+      field:             "UrbanSoccer - La Défense",
       location:          "UrbanSoccer - La Défense, Avenue François Arago, Nanterre, France",
-      number_of_players: 16,
+      number_of_players: 14,
       price:       12,
       creator_id:        2
     })
     Game.create!({
       datetime:          day.strftime("%a %d %b %Y 18:00"),
+      field:             "UrbanSoccer - Puteaux",
       location:          "UrbanSoccer - Puteaux, Rue de la République, Puteaux, France",
-      number_of_players: 16,
+      number_of_players: 14,
       price:       10,
       creator_id:        3
     })
   when "Thu"
     Game.create!({
       datetime:          day.strftime("%a %d %b %Y 18:00"),
+      field:             "UrbanSoccer - Puteaux",
       location:          "UrbanSoccer - Puteaux, Rue de la République, Puteaux, France",
-      number_of_players: 16,
+      number_of_players: 10,
       price:       10,
       creator_id:        5
     })
     Game.create!({
       datetime:          day.strftime("%a %d %b %Y 18:00"),
+      field:             "UrbanSoccer - La Défense"
       location:          "UrbanSoccer - La Défense, Avenue François Arago, Nanterre, France",
-      number_of_players: 16,
+      number_of_players: 14,
       price:       15.5,
       creator_id:        1
     })
   when "Fri"
     Game.create!({
       datetime:          day.strftime("%a %d %b %Y 18:00"),
+      field:             "UrbanSoccer - La Défense"
       location:          "UrbanSoccer - La Défense, Avenue François Arago, Nanterre, France",
-      number_of_players: 16,
+      number_of_players: 14,
       price:       10,
       creator_id:        2
     })
   when "Sat"
     Game.create!({
       datetime:          day.strftime("%a %d %b %Y 18:00"),
+      field:             "UrbanSoccer - Asnières"
       location:          "UrbanSoccer - Asnières, Rue Henri Vuillemin, Gennevilliers, France",
-      number_of_players: 16,
+      number_of_players: 14,
       price:       8,
       creator_id:        3
     })
     Game.create!({
       datetime:          day.strftime("%a %d %b %Y 18:00"),
+      field:             "UrbanSoccer - Porte d'Aubervilliers"
       location:          "UrbanSoccer - Porte d'Aubervilliers, Avenue Victor Hugo, Aubervilliers, France",
-      number_of_players: 16,
+      number_of_players: 10,
       price:       12,
       creator_id:        5
     })
   when "Sun"
     Game.create!({
       datetime:          day.strftime("%a %d %b %Y 18:00"),
+      field:             "UrbanSoccer - Asnières"
       location:          "UrbanSoccer - Asnières, Rue Henri Vuillemin, Gennevilliers, France",
-      number_of_players: 16,
+      number_of_players: 10,
       price:       14,
       creator_id:        1
     })
