@@ -13,7 +13,7 @@ fields_attributes = [
   {
     name:"UrbanSoccer - Asnières",
     location: "UrbanSoccer, Rue Henri Vuillemin, Gennevilliers, France"
-  }
+  },
   {
     name:"UrbanSoccer - Bordeaux Mérignac",
     location: "UrbanSoccer - Bordeaux Mérignac, Rue Archimède, Mérignac, France"
@@ -357,10 +357,10 @@ puts "Created #{Game.count} games!"
 
 puts "Creating Bookings..."
 100.times do |number|
-  Booking.new(
-    booking.user = number / 10 + 1
-    booking.game = number / 10 + 1
-  )
+  Booking.create!({
+    game_id:            number / 10 + 1,
+    user_id:            number / 10 + 1
+  })
 end
 puts "Created #{Booking.count} bookings!"
 

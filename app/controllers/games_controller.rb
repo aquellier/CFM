@@ -61,13 +61,13 @@ class GamesController < ApplicationController
   end
 
   def define_location
-    if @game.location == "UrbanSoccer - Porte d'Aubervilliers, Avenue Victor Hugo, Aubervilliers, France"
+    if @game.field.location == "UrbanSoccer - Porte d'Aubervilliers, Avenue Victor Hugo, Aubervilliers, France"
       @game.field = "Porte d'Aubervilliers"
-    elsif @game.location == "Praça de Espanha"
+    elsif @game.field.location == "Praça de Espanha"
       @game.field = "Praça de Espanha, Lisboa"
     elsif @game.field == "Anjos"
-      @game.location = "Anjos, Lisboa"
-    elsif @game.location == "Campo Pequeno"
+      @game.field.location = "Anjos, Lisboa"
+    elsif @game.field.location == "Campo Pequeno"
       @game.field = "Campo Pequeno,Lisboa"
     end
   end

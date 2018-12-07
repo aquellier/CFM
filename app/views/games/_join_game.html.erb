@@ -1,6 +1,6 @@
 <!-- Game information -->
 <div class="join-game">
-  <h4>This game will take place <strong><%= @game.datetime.strftime('%a %d %b %Y') %></strong> at <strong><%= @game.datetime.strftime('%I:%M pm') %></strong> at <strong><%= @game.location %></strong></h4>
+  <h4>This game will take place <strong><%= @game.datetime.strftime('%a %d %b %Y') %></strong> at <strong><%= @game.datetime.strftime('%I:%M pm') %></strong> at <strong><%= @game.field.location %></strong></h4>
 <!--   map box -->
 <div
   id="map-show"
@@ -22,7 +22,7 @@
     <p><i class="far fa-clock"></i> <%= @game.datetime.strftime('%l:%Mpm') %></p>
   </div>
   <div class="game-detail">
-    <p><i class="fas fa-map-marker-alt"></i> <%= @game.location %></p>
+    <p><i class="fas fa-map-marker-alt"></i> <%= @game.field.location %></p>
   </div>
   <div class="game-detail">
     <p><i class="far fa-credit-card"></i> <%= humanized_money_with_symbol(@game.price) %></p>

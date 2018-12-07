@@ -11,7 +11,7 @@
   <tbody>
     <% current_user.bookings.each do |booking| %>
       <tr>
-        <td><%= booking.game.location %></td>
+        <td><%= booking.game.field.location %></td>
         <td><%= booking.game.datetime.strftime("%a %d %b %Y") %></td>
         <td><%= booking.game.datetime.strftime('%I:%M pm') %></td>
         <td><%= booking.game.number_of_players / 2 - 1 %> Players</td>
