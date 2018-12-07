@@ -32,17 +32,16 @@ ActiveRecord::Schema.define(version: 2018_12_05_083834) do
     t.string "location"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.float "latitude"
+    t.float "longitude"
   end
 
   create_table "games", force: :cascade do |t|
     t.datetime "datetime"
     t.bigint "field_id"
-    t.string "location"
     t.integer "number_of_players"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.float "latitude"
-    t.float "longitude"
     t.integer "price_cents", default: 0, null: false
     t.integer "creator_id"
     t.index ["field_id"], name: "index_games_on_field_id"

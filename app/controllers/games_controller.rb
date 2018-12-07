@@ -5,8 +5,8 @@ class GamesController < ApplicationController
     @games = Game.where(:datetime => Date.today..Date.today + 14).order(:datetime)
     @markers = @games.map do |game|
       {
-        lng: game.longitude,
-        lat: game.latitude
+        lng: game.field.longitude,
+        lat: game.field.latitude
       }
     end
   end
@@ -14,8 +14,8 @@ class GamesController < ApplicationController
   def show
     @booking = Booking.new
     @markers = [{
-        lat: @game.latitude,
-        lng: @game.longitude#,
+        lat: @game.field.latitude,
+        lng: @game.field.longitude#,
         # infoWindow: { content: render_to_string(partial: "/games/map_box", locals: { flat: flat }) }
     }]
   end
