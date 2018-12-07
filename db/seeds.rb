@@ -5,129 +5,132 @@ puts 'Cleaning database...'
 Game.destroy_all
 
 puts 'Creating fields...'
-fields = [ "UrbanSoccer - Angers", "UrbanSoccer - Asnières", "UrbanSoccer - Bordeaux Mérignac",
-           "UrbanSoccer - Bordeaux Pessac", "UrbanSoccer - Clermont Ferranc", "UrbanSoccer - Dijon",
-           "UrbanSoccer - Every Courcouronnes", "UrbanSoccer - Grenoble", "UrbanSoccer - Guyancourt",
-           "UrbanSoccer - La Défense", "UrbanSoccer - Lille Bondues", "UrbanSoccer - Lille Lezennes",
-           "UrbanSoccer - Lyon Barolles", "UrbanSoccer - Lyon Beynost", "UrbanSoccer - Lyon Parilly",
-           "UrbanSoccer - Marne la Vallée", "UrbanSoccer - Meudon", "UrbanSoccer - Montpellier",
-           "UrbanSoccer - Nantes", "UrbanSoccer - Orsay", "UrbanSoccer - Porte d'Aubervilliers",
-           "UrbanSoccer - Porte d'Ivry", "UrbanSoccer - Puteaux", "UrbanSoccer - Rennes Cap Malo",
-           "UrbanSoccer - Rennes Vern", "UrbanSoccer - Saint Étienne", "UrbanSoccer - Strasbourg",
-           "UrbanSoccer - Toulouse Montaudran", "UrbanSoccer - Toulouse Sept Deniers", "UrbanSoccer - Villeneuve Loubet",
-fields.each { |f| Field.create!(name: s) }
-puts "Created #{Field.count} skills!"
+fields_attributes = [
+  {
+    name:"UrbanSoccer - Angers",
+    location: "UrbanSoccer - Angers"
+  },
+  {
+    name:"UrbanSoccer - Asnières",
+    location: "UrbanSoccer - Asnières"
+  },
+  {
+    name:"UrbanSoccer - Bordeaux Mérignac",
+    location: "UrbanSoccer - Bordeaux Mérignac"
+  },
+  {
+    name:"UrbanSoccer - Bordeaux Pessac",
+    location: "UrbanSoccer - Bordeaux Pessac"
+  },
+  {
+    name:"UrbanSoccer - Clermont Ferranc",
+    location: "UrbanSoccer - Clermont Ferranc"
+  },
+  {
+    name:"UrbanSoccer - Dijon",
+    location: "UrbanSoccer - Dijon"
+  },
+  {
+    name:"UrbanSoccer - Every Courcouronnes",
+    location: "UrbanSoccer - Every Courcouronnes"
+  },
+  {
+    name:"UrbanSoccer - Grenoble",
+    location: "UrbanSoccer - Grenoble"
+  },
+  {
+    name:"UrbanSoccer - Guyancourt",
+    location: "UrbanSoccer - Guyancourt"
+  },
+  {
+    name:"UrbanSoccer - La Défense",
+    location: "UrbanSoccer - La Défense"
+  },
+  {
+    name:"UrbanSoccer - Lille Bondues",
+    location: "UrbanSoccer - Lille Bondues"
+  },
+  {
+    name:"UrbanSoccer - Lille Lezennes",
+    location: "UrbanSoccer - Lille Lezennes"
+  },
+  {
+    name:"UrbanSoccer - Lyon Barolles",
+    location: "UrbanSoccer - Lyon Barolles"
+  },
+  {
+    name:"UrbanSoccer - Lyon Beynost",
+    location: "UrbanSoccer - Lyon Beynost"
+  },
+  {
+    name:"UrbanSoccer - Lyon Parilly",
+    location: "UrbanSoccer - Lyon Parilly"
+  },
+  {
+    name:"UrbanSoccer - Marne la Vallée",
+    location: "UrbanSoccer - Marne la Vallée"
+  },
+  {
+    name:"UrbanSoccer - Meudon",
+    location: "UrbanSoccer - Meudon"
+  },
+  {
+    name:"UrbanSoccer - Montpellier",
+    location: "UrbanSoccer - Montpellier"
+  },
+  {
+    name:"UrbanSoccer - Nantes",
+    location: "UrbanSoccer - Nantes"
+  },
+  {
+    name:"UrbanSoccer - Orsay",
+    location: "UrbanSoccer - Orsay"
+  },
+  {
+    name:"UrbanSoccer - Porte d'Aubervilliers",
+    location: "UrbanSoccer - Porte d'Aubervilliers"
+  },
+  {
+    name:"UrbanSoccer - Porte d'Ivry",
+    location: "UrbanSoccer - Porte d'Ivry"
+  },
+  {
+    name:"UrbanSoccer - Puteaux",
+    location: "UrbanSoccer - Puteaux"
+  },
+  {
+    name:"UrbanSoccer - Rennes Cap Malo",
+    location: "UrbanSoccer - Rennes Cap Malo"
+  },
+  {
+    name:"UrbanSoccer - Rennes Vern",
+    location: "UrbanSoccer - Rennes Vern"
+  },
+  {
+    name:"UrbanSoccer - Saint Étienne",
+    location: "UrbanSoccer - Saint Étienne"
+  },
+  {
+    name:"UrbanSoccer - Strasbourg",
+    location: "UrbanSoccer - Strasbourg"
+  },
+  {
+    name:"UrbanSoccer - Toulouse Montaudran",
+    location: "UrbanSoccer - Toulouse Montaudran"
+  },
+  {
+    name:"UrbanSoccer - Toulouse Sept Deniers",
+    location: "UrbanSoccer - Toulouse Sept Deniers"
+  },
+  {
+    name:"UrbanSoccer - Villeneuve Loubet",
+    location: "UrbanSoccer - Villeneuve Loubet"
+  }
+]
+Field.create!(fields_attributes)
+puts "Created #{Field.count} fields!"
 
-puts 'Creating games and users...'
-
-
-#     Campo Pequeno = "http://www.campopequeno.com/docs/images/crop/20160118145018498041.jpg"
-#     Olaias = "https://lh-i.global.ssl.fastly.net/images/holidays/db340a75354d2365859548be347f0f0fefa03019/portugal/lisbon/olaias-park-hotel-0.jpg?width=720&auto=webp&fit=crop&height=387"
-#     Praça da Espanha = "https://mediaserver2.rr.pt/newrr/praca_de_espanha_foto_dr6678053d.jpg"
-#     Anjos = "https://www.lx-prestige.fr/wp-content/uploads/2015/07/fiche-quartier-anjos-intendente-lisbonne-portugal-5-845x675.jpg"
-
-# Timetable:
-# Monday 20h 7vs7 Olaias
-# Tuesday 21h 7vs7 Olaias
-# Wednesday 20h 7vs7 Olaias
-# Wednesday 21h 6vs6 Praça de Espanha
-# Thursday 19h and 20h 6vs6 Praca de Espanha
-# Friday 21h 7vs7 Olaias
-# Saturday 11h e 19h 7vs7 Olaias
-# Sunday 19h 7vs7 Olaias
-games_attributes = []
-(Date.today..Date.today + 14).each do |day|
-  case day.strftime("%a")
-  when "Mon"
-    Game.create!({
-      datetime:          day.strftime("%a %d %b %Y 18:00"),
-      field:             "UrbanSoccer - Porte d'Aubervilliers"
-      location:          "UrbanSoccer - Porte d'Aubervilliers, Avenue Victor Hugo, Aubervilliers, France",
-      number_of_players: 10,
-      price:       14.5,
-      creator_id:        1
-    })
-  when "Tue"
-    Game.create!({
-      datetime:          day.strftime("%a %d %b %Y 18:00"),
-      field:             "UrbanSoccer - La Défense",
-      location:          "UrbanSoccer - La Défense, Avenue François Arago, Nanterre, France",
-      number_of_players: 10,
-      price:       16,
-      creator_id:        4
-    })
-  when "Wed"
-    Game.create!({
-      datetime:          day.strftime("%a %d %b %Y 18:00"),
-      field:             "UrbanSoccer - La Défense",
-      location:          "UrbanSoccer - La Défense, Avenue François Arago, Nanterre, France",
-      number_of_players: 14,
-      price:       12,
-      creator_id:        2
-    })
-    Game.create!({
-      datetime:          day.strftime("%a %d %b %Y 18:00"),
-      field:             "UrbanSoccer - Puteaux",
-      location:          "UrbanSoccer - Puteaux, Rue de la République, Puteaux, France",
-      number_of_players: 14,
-      price:       10,
-      creator_id:        3
-    })
-  when "Thu"
-    Game.create!({
-      datetime:          day.strftime("%a %d %b %Y 18:00"),
-      field:             "UrbanSoccer - Puteaux",
-      location:          "UrbanSoccer - Puteaux, Rue de la République, Puteaux, France",
-      number_of_players: 10,
-      price:       10,
-      creator_id:        5
-    })
-    Game.create!({
-      datetime:          day.strftime("%a %d %b %Y 18:00"),
-      field:             "UrbanSoccer - La Défense"
-      location:          "UrbanSoccer - La Défense, Avenue François Arago, Nanterre, France",
-      number_of_players: 14,
-      price:       15.5,
-      creator_id:        1
-    })
-  when "Fri"
-    Game.create!({
-      datetime:          day.strftime("%a %d %b %Y 18:00"),
-      field:             "UrbanSoccer - La Défense"
-      location:          "UrbanSoccer - La Défense, Avenue François Arago, Nanterre, France",
-      number_of_players: 14,
-      price:       10,
-      creator_id:        2
-    })
-  when "Sat"
-    Game.create!({
-      datetime:          day.strftime("%a %d %b %Y 18:00"),
-      field:             "UrbanSoccer - Asnières"
-      location:          "UrbanSoccer - Asnières, Rue Henri Vuillemin, Gennevilliers, France",
-      number_of_players: 14,
-      price:       8,
-      creator_id:        3
-    })
-    Game.create!({
-      datetime:          day.strftime("%a %d %b %Y 18:00"),
-      field:             "UrbanSoccer - Porte d'Aubervilliers"
-      location:          "UrbanSoccer - Porte d'Aubervilliers, Avenue Victor Hugo, Aubervilliers, France",
-      number_of_players: 10,
-      price:       12,
-      creator_id:        5
-    })
-  when "Sun"
-    Game.create!({
-      datetime:          day.strftime("%a %d %b %Y 18:00"),
-      field:             "UrbanSoccer - Asnières"
-      location:          "UrbanSoccer - Asnières, Rue Henri Vuillemin, Gennevilliers, France",
-      number_of_players: 10,
-      price:       14,
-      creator_id:        1
-    })
-  end
-end
-
+puts "Creating users..."
 
 users_attributes = [
   {
@@ -200,4 +203,99 @@ users_attributes = [
 
 # Game.create!(games_attributes)
 User.create!(users_attributes)
-puts 'Finished!'
+
+puts 'Creating games...'
+
+(Date.today..Date.today + 14).each do |day|
+  case day.strftime("%a")
+  when "Mon"
+    field = Field.find(rand(fields_attributes.length))
+    Game.create!({
+      datetime:          day.strftime("%a %d %b %Y 18:00"),
+      location:          field.location,
+      number_of_players: 10,
+      price:             14.5,
+      creator:           User.find(1)
+    })
+  when "Tue"
+    field = Field.find(rand(fields_attributes.length))
+    Game.create!({
+      datetime:          day.strftime("%a %d %b %Y 18:00"),
+      location:          Field.find(2).location,
+      number_of_players: 10,
+      price:             16,
+      creator:           User.find(4)
+    })
+  when "Wed"
+    field = Field.find(rand(fields_attributes.length))
+    Game.create!({
+      datetime:          day.strftime("%a %d %b %Y 18:00"),
+      location:          field.location,
+      number_of_players: 14,
+      price:             12,
+      creator:           User.find(2)
+    })
+    Game.create!({
+      datetime:          day.strftime("%a %d %b %Y 18:00"),
+      location:          field.location,
+      number_of_players: 14,
+      price:             10,
+      creator:           User.find(3)
+    })
+  when "Thu"
+    field = Field.find(rand(fields_attributes.length))
+    Game.create!({
+      datetime:          day.strftime("%a %d %b %Y 18:00"),
+      location:          field.location,
+      number_of_players: 10,
+      price:             10,
+      creator:           User.find(5)
+    })
+    Game.create!({
+      datetime:          day.strftime("%a %d %b %Y 18:00"),
+      location:          field.location,
+      number_of_players: 14,
+      price:             15.5,
+      creator:           User.find(1)
+    })
+  when "Fri"
+    field = Field.find(rand(fields_attributes.length))
+    Game.create!({
+      datetime:          day.strftime("%a %d %b %Y 18:00"),
+      location:          field.location,
+      number_of_players: 14,
+      price:             10,
+      creator:           User.find(2)
+    })
+  when "Sat"
+    field = Field.find(rand(fields_attributes.length))
+    Game.create!({
+      datetime:          day.strftime("%a %d %b %Y 18:00"),
+      location:          field.location,
+      number_of_players: 14,
+      price:             8,
+      creator:           User.find(3)
+    })
+    Game.create!({
+      datetime:          day.strftime("%a %d %b %Y 18:00"),
+      location:          field.location,
+      number_of_players: 10,
+      price:             12,
+      creator:           User.find(5)
+    })
+  when "Sun"
+    field = Field.find(rand(fields_attributes.length))
+    Game.create!({
+      datetime:          day.strftime("%a %d %b %Y 18:00"),
+      location:          field.location,
+      number_of_players: 10,
+      price:             14,
+      creator:           User.find(1)
+    })
+  end
+end
+
+puts "Created #{Game.count} games!"
+
+
+puts 'Seeding finished'

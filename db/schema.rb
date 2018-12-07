@@ -27,10 +27,17 @@ ActiveRecord::Schema.define(version: 2018_12_05_083834) do
     t.index ["user_id"], name: "index_bookings_on_user_id"
   end
 
+  create_table "fields", force: :cascade do |t|
+    t.string "name"
+    t.string "location"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "games", force: :cascade do |t|
     t.datetime "datetime"
+    t.bigint "field_id"
     t.string "location"
-    t.string "field"
     t.integer "number_of_players"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -38,6 +45,7 @@ ActiveRecord::Schema.define(version: 2018_12_05_083834) do
     t.float "longitude"
     t.integer "price_cents", default: 0, null: false
     t.integer "creator_id"
+    t.index ["field_id"], name: "index_games_on_field_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -74,4 +82,5 @@ ActiveRecord::Schema.define(version: 2018_12_05_083834) do
 
   add_foreign_key "bookings", "games"
   add_foreign_key "bookings", "users"
+  add_foreign_key "games", "fields"
 end
