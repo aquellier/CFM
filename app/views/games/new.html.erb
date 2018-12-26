@@ -6,7 +6,7 @@
         <%= simple_form_for(@game) do |f| %>
           <div class="form-inputs">
             <%= f.input :datetime, label: "Date & Time", required: true, as: :string, placeholder: "Please select a day and an hour" %>
-            <%= f.input :location, required: true, placeholder: "UrbanSoccer - La Défense", hint: "* Enter an exact address if you do not find your field" %>
+            <%= f.input :field, placeholder:  "UrbanSoccer - La Défense" %>
             <%= f.input :number_of_players, required: true, :collection => [12, 14, 16], hint: "* Remember to add one substitute per team" %>
             <%= f.input :price %>
           </div>

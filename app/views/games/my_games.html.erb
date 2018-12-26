@@ -20,7 +20,7 @@
             Payment pending
           <% elsif booking.state == "paid"%>
             Paid
-          <% elsif Date.today > booking.date %>
+          <% elsif Date.today > booking.game.datetime %>
             Played
           <% else %>
             Cash payment
