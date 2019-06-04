@@ -9,14 +9,43 @@
   transition: 0.6s;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding: 10px;
   &:hover {
     transition: 0.6s;
     transform: scale(1.01);
   }
   .avatar-medium {
     margin: auto;
+  }
+  .game-creator {
+    display: flex;
+    width: 22%;
+  }
+
+  .game-date {
+    width: 18%;
+  }
+
+  .game-cost {
+    width: 10%;
+  }
+
+  .game-time {
+    width: 10%;
+  }
+
+  .game-location {
+    width: 30%;
+  }
+
+  .number-of-players {
+    width: 8%;
+    background-color: $green;
+    padding: 5px;
+    border-radius: 2px;
+    h6 {
+      font-size: 14px;
+      margin: 0;
+    }
   }
 }
 
@@ -27,25 +56,6 @@
   p {
     font-size: 12px;
     margin-bottom: 0;
-  }
-}
-
-.game-creator {
-  display: flex;
-
-}
-
-.game-location {
-  width: 25%;
-}
-
-.number-of-players {
-  background-color: $green;
-  padding: 5px;
-  border-radius: 2px;
-  h6 {
-    font-size: 14px;
-    margin: 0;
   }
 }
 
