@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_12_05_083834) do
+ActiveRecord::Schema.define(version: 2019_06_04_133541) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -45,6 +45,12 @@ ActiveRecord::Schema.define(version: 2018_12_05_083834) do
     t.integer "price_cents", default: 0, null: false
     t.integer "creator_id"
     t.index ["field_id"], name: "index_games_on_field_id"
+  end
+
+  create_table "nationalities", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|
