@@ -88,4 +88,7 @@
   height: 60px;
   background-color: $pearl-white;
   border-bottom: 1px solid $brownie;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }

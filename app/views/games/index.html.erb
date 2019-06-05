@@ -1,13 +1,19 @@
+
 <div class="games-nav">
 
   <div class="search-games">
-    <%= form_for games_path %>
-
+    <%= form_tag games_path, method: :get do %>
+      <%= text_field_tag :address_query,
+        params[:address_query],
+        class: "search-games-input",
+        placeholder: "Enter your address"
+      %>
+      <%= submit_tag "Find nearest games" %>
     <% end %>
   </div>
 
   <div class="switch-button">
-    <p class="switch-text">Show/Hide Map</p>
+    <span class="switch-text"><p>Show/Hide Map</p></span>
     <label class="switch">
       <input type="checkbox" id="show-map">
       <span class="slider round"></span>

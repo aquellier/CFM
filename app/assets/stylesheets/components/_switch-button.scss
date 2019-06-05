@@ -1,16 +1,20 @@
 /* The switch - the box around the slider */
 .switch-button {
   float: right;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 .switch-text{
   color: $brownie;
-  position: relative;
-  display: inline-block;
-  margin-bottom: 40px;
-  padding-right: 15px;
-  vertical-align: middle;
   font-size: 14px;
   margin-left: 40px;
+  align-items: center;
+  p {
+    line-height: 60px;
+    text-align: center;
+    margin: 0;
+  }
 }
 
 .switch {
@@ -18,7 +22,7 @@
   display: inline-block;
   width: 60px;
   height: 34px;
-  margin: 10px 30px 10px 0;
+  margin: 0 20px 0 10px;
 }
 
 /* Hide default HTML checkbox */
