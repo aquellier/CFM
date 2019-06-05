@@ -1,29 +1,12 @@
 
 <div class="games-nav">
-
-  <div class="search-games">
-    <%= form_tag games_path, method: :get do %>
-      <%= text_field_tag :address_query,
-        params[:address_query],
-        class: "search-games-input",
-        placeholder: "Enter your address"
-      %>
-      <%= submit_tag "Find nearest games" %>
-    <% end %>
-  </div>
-
-  <div class="switch-button">
-    <span class="switch-text"><p>Show/Hide Map</p></span>
-    <label class="switch">
-      <input type="checkbox" id="show-map">
-      <span class="slider round"></span>
-    </label>
-  </div>
+  <%= render 'search' %>
+  <%= render 'switch_button' %>
 </div>
 <!--   Left-Section -->
 
 <div class="games-container">
-    <%= render 'games' %>
+  <%= render 'games' %>
 </div>
 <!--   Right-section -->
 <div id="map-index-container">
