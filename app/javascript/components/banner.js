@@ -24,4 +24,3 @@ function changeButton() {
 }
 
 export { fadeOut, changeButton }
-

@@ -7,13 +7,7 @@ class GamesController < ApplicationController
       fields = Field.near(params[:address_query], 50, order: 'distance')
       @games = @games.select { |game| fields.include?(game.field)}
     end
-
-    @markers = @games.map do |game|
-      {
-        lng: game.field.longitude,
-        lat: game.field.latitude
-      }
-    end
+    get_markers(@games)
   end
 
   def show
@@ -65,6 +59,13 @@ class GamesController < ApplicationController
     @game = Game.find(params[:id])
   end
 
-
+  def get_markers(games)
+    @markers = games.map do |game|
+      {
+        lng: game.field.longitude,
+        lat: game.field.latitude
+      }
+    end
+  end
 
 end
