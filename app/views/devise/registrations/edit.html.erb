@@ -15,8 +15,8 @@
               <p>Currently waiting confirmation for: <%= resource.unconfirmed_email %></p>
             <% end %>
 
-            <%= f.input :position, collection: ["Attacker", "Midfielder", "Defender", "Goalkeeper"] %>
-            <%= f.input :nationality, collection: Nationality.all.map(&:name) %>
+            <%= f.input :position, collection: User::POSITIONS %>
+            <%= f.input :nationality, collection: User::NATIONALITIES %>
             <%= f.input :size %>
             <%= f.input :weight %>
             <%= f.input :phone_number %>

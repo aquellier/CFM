@@ -58,18 +58,22 @@
   margin-top: 15px;
   box-shadow: 1px 1px 4px #E6E6E6;
   border-color: #E6E6E6;
+  background-color: $pearl-white;
 }
 .navbar-cfm-dropdown-menu li > a {
   transition: color 0.3s ease;
   font-weight: lighter !important;
-  color: #999999 !important;
+  color: $brownie !important;
   font-size: 15px !important;
   line-height: 22px !important;
   padding: 10px 20px;
+  opacity: 0.5;
+  transition: 0.3s;
 }
 .navbar-cfm-dropdown-menu li > a:hover {
   background: transparent !important;
-  color: black !important;
+  opacity: 1;
+  transition: 0.3s;
 }
 .navbar-cfm-dropdown-menu:before {
   content: ' ';
@@ -82,6 +86,10 @@
   transform: rotate(45deg);
   border-left: 1px solid #E6E6E6;
   border-top: 1px solid #E6E6E6;
+}
+
+.white-icon {
+  color: $pearl-white;
 }
 
 .games-nav {
