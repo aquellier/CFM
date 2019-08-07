@@ -5,14 +5,12 @@
 .banner {
   background:
   linear-gradient(-225deg, rgba(0, 0, 0,0.3) 0%, rgba(0, 0, 0,0.3) 50%),
-  // url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Z5+AAAAJElEQVQYV2NkQAX/GaH8NAYGhpkMDAyMMIH/IA5IEkTAOSABAIRGBARyOsGQAAAAAElFTkSuQmCC) repeat,
   url('https://i.pinimg.com/originals/5d/fe/73/5dfe73f627b97ef5a2ea1baa6d817dcf.jpg')bottom;
   background-size: cover;
   background-attachment: fixed;
   color: $pearl-white;
   text-align: center;
   height: calc(100vh);
-  /* if you have a 70px navbar => height: calc(100vh - 70px); */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -46,4 +44,13 @@
 
 .white-section {
   background-color: $pearl-white;
+}
+
+.banner-card {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
 }
