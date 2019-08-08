@@ -32,7 +32,7 @@
             <i class="far fa-credit-card"></i>
             <p><%= humanized_money_with_symbol(game.price) %></p>
           </div>
-          <div class="card-item number-of-players">
+          <div class="card-item number-of-players <%= game.bookings.length == game.number_of_players ? 'full' : 'notfull'%>">
             <p><%= game.bookings.length %> / <%= game.number_of_players %></strong></p>
           </div>
         </div>

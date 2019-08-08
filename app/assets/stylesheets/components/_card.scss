@@ -38,13 +38,19 @@
   }
 
   .number-of-players {
+    color: $pearl-white;
     width: 8%;
-    background-color: $green;
     padding: 5px;
     border-radius: 2px;
     h6 {
       font-size: 14px;
       margin: 0;
+    }
+    &.notfull {
+      background-color: $green;
+    }
+    &.full {
+      background-color: $red;
     }
   }
 }
