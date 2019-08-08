@@ -5,7 +5,7 @@ class GamesController < ApplicationController
     @games = Game.where(datetime: Date.today..Date.today + 14)
     if params[:address_query].present?
       fields = Field.near(params[:address_query], 50, order: 'distance')
-      @games = @games.select { |game| fields.include?(game.field)}
+      @games = @games.map(&:field)
     end
     get_markers(@games)
   end
