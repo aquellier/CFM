@@ -3,10 +3,12 @@ class GamesController < ApplicationController
   before_action :set_game, only: [:show, :edit, :update, :destroy]
   def index
     @games = Game.where(datetime: Date.today..Date.today + 14)
+    fields = @games.map(&:field)
     if params[:address_query].present?
       fields = Field.near(params[:address_query], 50, order: 'distance')
+      @games = @games.select { |game| fields.include? game.field }
     end
-    get_markers(fields)
+    get_markers(@games)
   end
 
   def show
@@ -58,11 +60,11 @@ class GamesController < ApplicationController
     @game = Game.find(params[:id])
   end
 
-  def get_markers(fields)
-    @markers = fields.map do |field|
+  def get_markers(games)
+    @markers = games.map do |game|
       {
-        lng: field.longitude,
-        lat: field.latitude
+        lng: game.field.longitude,
+        lat: game.field.latitude
       }
     end
   end
