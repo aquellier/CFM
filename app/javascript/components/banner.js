@@ -1,4 +1,4 @@
-function fadeOut() {
+const fadeOut = () => {
   console.log('hello from fadeOut');
   const bannerContent = document.querySelector('.banner-content');
   let opacity = 1 - (scrollY/300);
@@ -7,7 +7,7 @@ function fadeOut() {
   }
 }
 
-function changeButton() {
+const changeButton = () => {
   console.log('hello from changebutton');
   const button = document.querySelector('.white-button');
   if (button) {

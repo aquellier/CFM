@@ -1,7 +1,7 @@
 import GMaps from 'gmaps/gmaps.js';
 import styles from './styles.js';
 
-function addMarkers(map, markers) {
+const addMarkers = (map, markers) => {
   map.addMarkers(markers);
   if (markers.length === 0) {
     map.setZoom(2);
@@ -13,7 +13,7 @@ function addMarkers(map, markers) {
   }
 }
 
-function addStyle(map) {
+const addStyle = (map) => {
   map.addStyle({
     styles: styles,
     mapTypeId: 'map_style'
@@ -22,7 +22,7 @@ function addStyle(map) {
 }
 
 
-function initMapShow() {
+const initMapShow = () => {
   const mapShow = document.getElementById('map-show');
   if (mapShow) { // don't try to build a map if there's no div#map to inject in
     const map = new GMaps({ el: '#map-show', lat: 0, lng: 0 });
@@ -32,14 +32,14 @@ function initMapShow() {
   }
 }
 
-function initMapIndex() {
+const initMapIndex = () => {
   const mapIndex = document.getElementById('map-index');
   if (mapIndex) { // don't try to build a map if there's no div#map to inject in
     const map = new GMaps({ el: '#map-index', lat: 0, lng: 0 });
     const markers = JSON.parse(mapIndex.dataset.markers);
     addMarkers(map, markers);
     addStyle(map);
-    function updateMarkers(markersData) {
+    const updateMarkers = (markersData) => {
       map.removeMarkers(markers);
       addMarkers(map, markersData);
       console.log(markersData);

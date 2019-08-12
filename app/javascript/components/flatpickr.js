@@ -1,5 +1,5 @@
 import flatpickr from 'flatpickr';
-function calendar() {
+const calendar = () => {
   flatpickr('#game_datetime', {
     minDate: "today",
     enableTime: true,

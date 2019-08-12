@@ -1,4 +1,4 @@
-function navbarScroll() {
+const navbarScroll = () => {
   const navbar = document.querySelector('.navbar-cfm-transparent');
   if (navbar) {
     console.log('hello from navabr.js');

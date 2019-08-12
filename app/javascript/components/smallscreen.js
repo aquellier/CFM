@@ -1,4 +1,4 @@
-function hideOnSmallScreen() {
+const hideOnSmallScreen = () => {
   console.log('hello from hideSmall');
   const mapIndex = document.getElementById('map-index');
   const mapIndexContainer = document.getElementById('map-index-container');

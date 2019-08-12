@@ -13,7 +13,7 @@ const hideElement = (element) => {
   }
 }
 
-function hideShow() {
+const hideShow = () => {
   if (mapIndex) {
     console.log('hello from hide');
     window.isMapOpen = true;
