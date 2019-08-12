@@ -1,0 +1,8 @@
+function refreshList(innerHTML) {
+  const newGamesList = document.querySelector('.games-container');
+  newGamesList.innerHTML = innerHTML;
+}
+const ajaxUpdateMarkers = (markers) => { updateMarkers(markers)};
+
+refreshList('<%= j render "games/games" %>');
+ajaxUpdateMarkers(<%= raw @markers.to_json %>);

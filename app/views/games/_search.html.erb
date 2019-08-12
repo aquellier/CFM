@@ -1,5 +1,5 @@
 <div class="search-games">
-  <%= form_tag games_path, method: :get do %>
+  <%= form_tag games_path, method: :get, remote: true do %>
     <%= text_field_tag :address_query,
       params[:address_query],
       class: "search-games-input",
