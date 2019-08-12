@@ -5,9 +5,8 @@ class GamesController < ApplicationController
     @games = Game.where(datetime: Date.today..Date.today + 14)
     if params[:address_query].present?
       fields = Field.near(params[:address_query], 50, order: 'distance')
-      @games = @games.map(&:field)
     end
-    get_markers(@games)
+    get_markers(fields)
   end
 
   def show
@@ -59,11 +58,11 @@ class GamesController < ApplicationController
     @game = Game.find(params[:id])
   end
 
-  def get_markers(games)
-    @markers = games.map do |game|
+  def get_markers(fields)
+    @markers = fields.map do |field|
       {
-        lng: game.field.longitude,
-        lat: game.field.latitude
+        lng: field.longitude,
+        lat: field.latitude
       }
     end
   end
