@@ -27,6 +27,7 @@ class GamesController < ApplicationController
 
   def new
     @game = Game.new
+    @field = Field.new
   end
 
   def create
@@ -38,15 +39,6 @@ class GamesController < ApplicationController
     else
       render :new
     end
-  end
-
-  def edit
-  end
-
-  def update
-  end
-
-  def destroy
   end
 
   def my_games

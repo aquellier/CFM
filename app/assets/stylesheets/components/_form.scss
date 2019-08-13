@@ -3,7 +3,7 @@
   background: $transparent-pearl-white;
   color: $brownie;
   padding: 25px;
-  margin-top: 20px;
+  margin: 20px;
   border-radius: 4px;
   box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
   overflow: scroll;
@@ -23,8 +23,16 @@
     text-decoration: none;
   }
   h6 {
-    color: $red;
+    color: $brownie;
+    cursor: pointer;
   }
+  h6:hover {
+    color: $green !important;
+  }
+  small {
+    color: $brownie;
+  }
+
 }
 
 .long-form {
@@ -50,3 +58,6 @@
   float: right;
 }
 
+.pac-container {
+  z-index: 2000;
+}

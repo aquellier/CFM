@@ -7,8 +7,9 @@ Rails.application.routes.draw do
   get '/profile', to: 'pages#profile'
   get 'privacy', to: 'pages#privacy'
   resources :games
-  resources :bookings, only: [ :show, :create] do
+  resources :bookings, only: [:show, :create] do
     resources :payments, only: [:new, :create]
   end
+  resources :fields, only: [:create]
   get '/my_games', to: 'games#my_games'
 end
