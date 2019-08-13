@@ -1,44 +1,46 @@
 <!-- Game information -->
 <div class="join-game">
   <h4>This game will take place <strong><%= @game.datetime.strftime('%a %d %b %Y') %></strong> at <strong><%= @game.datetime.strftime('%I:%M pm') %></strong> at <strong><%= @game.field.location %></strong></h4>
-<!--   map box -->
-<div
-  id="map-show"
-  data-markers="<%= @markers.to_json %>"
-></div>
+  <!--   map box -->
+  <div
+    id="map-show"
+    data-markers="<%= @markers.to_json %>"
+  ></div>
 
-<!-- Game-details -->
-<div class="game-details">
-  <% players = @game.bookings.to_a.map { |booking| booking.user } %>
-  <div class="space-stuff">
-    <p><i class="far fa-calendar-alt"></i> <%= @game.datetime.strftime('%a %d %b %Y') %></p>
-    <div class="number-of-players">
-      <h6>
-        <%= @game.bookings.length %> / <%= @game.number_of_players %>
-      </h6>
-    </div>
-  </div>
-  <div class="game-detail">
-    <p><i class="far fa-clock"></i> <%= @game.datetime.strftime('%l:%Mpm') %></p>
-  </div>
-  <div class="game-detail">
-    <p><i class="fas fa-map-marker-alt"></i> <%= @game.field.location %></p>
-  </div>
-  <div class="game-detail">
-    <p><i class="far fa-credit-card"></i> <%= humanized_money_with_symbol(@game.price) %></p>
-  </div>
-  <div class="game-detail">
-    <%= form_tag bookings_path do %>
-      <%= hidden_field_tag 'game_id', @game.id %>
-      <div class="space-stuff">
-      <% if players.include?(current_user)%>
-        <p>You're already registered for this game</p>
-      <% elsif players.length >= @game.number_of_players %>
-        <p>This game is already full</p>
-      <% else %>
-        <%= submit_tag 'Join this game', class: 'btn btn-primary' %>
-      <% end %>
-        <%= link_to 'Back to games', games_path, class: 'btn btn-danger' %>
+  <!-- Game-details -->
+  <div class="game-details">
+    <% players = @game.bookings.to_a.map { |booking| booking.user } %>
+    <div class="space-stuff">
+      <p><i class="far fa-calendar-alt"></i> <%= @game.datetime.strftime('%a %d %b %Y') %></p>
+      <div class="number-of-players">
+        <h6>
+          <%= @game.bookings.length %> / <%= @game.number_of_players %>
+        </h6>
       </div>
+    </div>
+    <div class="game-detail">
+      <p><i class="far fa-clock"></i> <%= @game.datetime.strftime('%l:%Mpm') %></p>
+    </div>
+    <div class="game-detail">
+      <p><i class="fas fa-map-marker-alt"></i> <%= @game.field.location %></p>
+    </div>
+    <div class="game-detail">
+      <p><i class="far fa-credit-card"></i> <%= humanized_money_with_symbol(@game.price) %></p>
+    </div>
+    <div class="game-detail">
+      <%= form_tag bookings_path do %>
+        <%= hidden_field_tag 'game_id', @game.id %>
+        <div class="space-stuff">
+        <% if players.include?(current_user)%>
+          <p>You're already registered for this game</p>
+        <% elsif players.length >= @game.number_of_players %>
+          <p>This game is already full</p>
+        <% else %>
+          <%= submit_tag 'Join this game', class: 'btn btn-primary' %>
+        <% end %>
+          <%= link_to 'Back to games', games_path, class: 'btn btn-danger' %>
+        </div>
+    </div>
+    <% end %>
   </div>
-  <% end %>
+</div>

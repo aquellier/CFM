@@ -7,7 +7,7 @@ puts 'Creating games...'
       datetime:          day.strftime("%a %d %b %Y 18:00"),
       number_of_players: 10,
       price:             14.5,
-      creator:           User.find(1)
+      creator_id:        rand(1...100)
     })
   when "Tue"
     Game.create!({
@@ -15,7 +15,7 @@ puts 'Creating games...'
       datetime:          day.strftime("%a %d %b %Y 18:00"),
       number_of_players: 10,
       price:             16,
-      creator:           User.find(2)
+      creator_id:        rand(1...100)
     })
   when "Wed"
     Game.create!({
@@ -23,14 +23,14 @@ puts 'Creating games...'
       datetime:          day.strftime("%a %d %b %Y 18:00"),
       number_of_players: 14,
       price:             12,
-      creator:           User.find(3)
+      creator_id:        rand(1...100)
     })
     Game.create!({
       field_id:          index + 1,
       datetime:          day.strftime("%a %d %b %Y 18:00"),
       number_of_players: 14,
       price:             10,
-      creator:           User.find(4)
+      creator_id:        rand(1...100)
     })
   when "Thu"
     Game.create!({
@@ -38,14 +38,14 @@ puts 'Creating games...'
       datetime:          day.strftime("%a %d %b %Y 18:00"),
       number_of_players: 10,
       price:             10,
-      creator:           User.find(5)
+      creator_id:        rand(1...100)
     })
     Game.create!({
       field_id:          index + 1,
       datetime:          day.strftime("%a %d %b %Y 18:00"),
       number_of_players: 14,
       price:             15.5,
-      creator:           User.find(6)
+      creator_id:        rand(1...100)
     })
   when "Fri"
     Game.create!({
@@ -53,7 +53,7 @@ puts 'Creating games...'
       datetime:          day.strftime("%a %d %b %Y 18:00"),
       number_of_players: 14,
       price:             10,
-      creator:           User.find(7)
+      creator_id:        rand(1...100)
     })
   when "Sat"
     Game.create!({
@@ -61,14 +61,14 @@ puts 'Creating games...'
       datetime:          day.strftime("%a %d %b %Y 18:00"),
       number_of_players: 14,
       price:             8,
-      creator:           User.find(8)
+      creator_id:        rand(1...100)
     })
     Game.create!({
       field_id:          index + 1,
       datetime:          day.strftime("%a %d %b %Y 18:00"),
       number_of_players: 10,
       price:             12,
-      creator:           User.find(9)
+      creator_id:        rand(1...100)
     })
   when "Sun"
     Game.create!({
@@ -76,7 +76,7 @@ puts 'Creating games...'
       datetime:          day.strftime("%a %d %b %Y 18:00"),
       number_of_players: 10,
       price:             14,
-      creator:           User.find(10)
+      creator_id:        rand(1...100)
     })
   end
 end
