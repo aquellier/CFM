@@ -32,3 +32,17 @@ end
     phone_number: Faker::PhoneNumber.phone_number_with_country_code
   )
 end
+
+User.create!(
+    first_name: first_name,
+    last_name: Faker::Name.last_name,
+    email: Faker::Internet.email(name: first_name),
+    password: "crazyfootball",
+    nationality: Faker::Nation.nationality,
+    date_of_birth: Faker::Date.birthday(min_age: 18, max_age: 65),
+    position: User::POSITIONS.sample,
+    photo_fake: ActionController::Base.helpers.asset_path('avatar.jpg'),
+    size: rand(150..175),
+    weight: rand(45..70),
+    phone_number: Faker::PhoneNumber.phone_number_with_country_code
+  )
