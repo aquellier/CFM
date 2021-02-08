@@ -10,7 +10,7 @@ gem 'redis'
 gem 'devise'
 gem 'figaro'
 gem 'cloudinary'
-gem 'carrierwave', '~> 1.2'
+gem 'carrierwave', '~> 1.3'
 
 gem 'autoprefixer-rails'
 gem 'bootstrap-sass', '~> 3.3'
